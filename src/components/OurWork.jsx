@@ -1,14 +1,15 @@
 import React from 'react'
 import assets from '../assets/assets'
+import Project1 from '../assets/bluewave_project_img.png'
 import Title from './Title'
 import { motion } from 'motion/react'
 
 const OurWork = () => {
     const workData = [
         {
-            title: 'Mobile App Design',
+            title: 'Bluewave Company',
             description: 'A sleek and intuitive mobile app that enhances user engagement and drives conversions.',
-            image: assets.work_mobile_app
+            image: Project1
         },
         {
             title: 'Fitness app promotion',
@@ -38,8 +39,10 @@ const OurWork = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{duration: 0.5, delay: index * 0.2}}
             viewport={{ once: true }}
-              key={index} className='hover:scale-102 transition-all duration-500 cursor-pointer'>
-                <img src={work.image} alt="work images" className='rounded-xl w-full'/>
+              key={index} className='hover:scale-102 transition-all cursor-pointer'>
+                <div className='w-full h-[250px] overflow-hidden rounded-xl'>
+                  <img src={work.image} alt="work images" className='w-full h-full object-fit'/>
+                </div>
                 <h3 className='mt-3 mb-2 text-lg font-semibold'>{work.title}</h3>
                 <p className='text-sm w-5/6 opacity-60'>{work.description}</p>
             </motion.div> 

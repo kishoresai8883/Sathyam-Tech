@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import TrustedBy from './components/TrustedBy'
+import About from './components/About'
 import Services from './components/Services'
 import OurWork from './components/OurWork'
 import Teams from './components/Teams'
@@ -18,6 +19,7 @@ localStorage.getItem('theme') : 'light')
       <Navbar theme={theme} setTheme={setTheme}/>
       <Hero/>
       <TrustedBy/>
+      <About/>
       <Services/>
       <OurWork/>
       <Teams/>
