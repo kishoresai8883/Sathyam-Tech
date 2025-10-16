@@ -20,10 +20,10 @@ const Navbar = ({theme, setTheme}) => {
         right-0 max-sm:min-h-screen max-sm:h-full max-sm:flex-col max-sm:bg-primary max-sm:text-white max-sm:pt-20
         flex sm:items-center gap-5 transition-all`}>
         <img src={assets.close_icon} alt="close" className='w-5 absolute right-4 top-4 sm:hidden' onClick={()=> setSidebarOpen(false)} />
-        <a href='#' onClick={()=> setSidebarOpen(false)} className='sm:hover:border-b'>Home</a>
-        <a href='#about' onClick={()=> setSidebarOpen(false)} className='sm:hover:border-b'>About</a>
-        <a href='#services' onClick={()=> setSidebarOpen(false)} className='sm:hover:border-b'>Services</a>
-        <a href='#contact-us' onClick={()=> setSidebarOpen(false)} className='sm:hover:border-b'>Contact Us</a>
+        <a href='#' onClick={()=> setSidebarOpen(false)} className='sm:hover:border-b sm:hover:border-b-orange-400'>Home</a>
+        <a href='#about' onClick={()=> setSidebarOpen(false)} className='sm:hover:border-b sm:hover:border-b-orange-400'>About</a>
+        <a href='#services' onClick={()=> setSidebarOpen(false)} className='sm:hover:border-b sm:hover:border-b-orange-400'>Services</a>
+        <a href='#contact-us' onClick={()=> setSidebarOpen(false)} className='sm:hover:border-b sm:hover:border-b-orange-400'>Contact Us</a>
       </div>
       <div className='flex items-center gap-2 sm:gap-4'>
         <ThemeToggleBtn theme={theme} setTheme={setTheme}/>

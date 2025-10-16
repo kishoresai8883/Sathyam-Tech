@@ -12,9 +12,8 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{duration: 0.5, delay: 0.7}}
         viewport={{ once: true }}
-        className='inline-flex items-center gap-2 border border-gray-300 p-1.5 pr-4 rounded-full'>
-        <img src={assets.group_profile} alt="profile" className='w-20'/>
-        <p className='text-xs font-medium'>Trusted by 10k+ People</p>
+        className='items-center border border-slate-300 p-1.5 px-4 rounded-full'>
+        <p className='text-sm font-semiBold'>Revolutionize Workflow</p>
       </motion.div>
       <motion.h1
         initial={{ opacity: 0, y: 40 }}
@@ -30,7 +29,7 @@ const Hero = () => {
         transition={{duration: 0.5, delay: 1}}
         viewport={{ once: true }}
         className='text-sm sm:text-lg font-medium text-gray-500 dark:text-white/75
-          max-w-4/5 sm:max-w-lg pb-3'>Bringing innovative ideas to life as engaging, interactive Digital experiences that spark authentic connections.</motion.p>
+          max-w-4/5 max-w-xl pb-3'>Bringing innovative ideas to life as engaging, interactive Digital experiences that spark authentic connections.</motion.p>
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}

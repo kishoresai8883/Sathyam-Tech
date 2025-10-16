@@ -9,6 +9,7 @@ import Teams from './components/Teams'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { Toaster} from 'react-hot-toast'
+import CTA from './components/CTA'
 
 const App = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') ?
@@ -24,6 +25,7 @@ localStorage.getItem('theme') : 'light')
       <OurWork/>
       <Teams/>
       <Contact/>
+      <CTA/>
       <Footer theme={theme}/>
     </div>
   )
