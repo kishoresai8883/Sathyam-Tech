@@ -8,7 +8,7 @@ const OurWork = () => {
     const workData = [
         {
             title: 'Bluewave Company',
-            description: 'A sleek and intuitive mobile app that enhances user engagement and drives conversions.',
+            description: 'A Website is designed and developed for Bluewave Company, a leading provider of Manpower & Mapping Services in india.',
             image: Project1
         },
         {
