@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
 import Title from './Title'
 import assets from '../assets/assets'
 import aboutImg from '../assets/hero_img1.jpg'
@@ -37,10 +37,10 @@ const About = () => {
                     </li>
                 </ul>
                 <div className='flex justify-center'>
-                    <button className='flex w-max gap-2 bg-primary text-white
+                    <Link to='/about' className='flex w-max gap-2 bg-primary text-white
                         text-sm px-8 py-2 rounded-md cursor-pointer hover:scale-102 transition-all'>
                         Know More <img src={assets.arrow_icon} alt="about" className='w-4'/>
-                </button>
+                    </Link>
                 </div>
                 
             </div>

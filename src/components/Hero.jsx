@@ -21,7 +21,7 @@ const Hero = () => {
         transition={{duration: 0.6, delay: 0.8}}
         viewport={{ once: true }}
         className='text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium
-          sl:leading-[95px] max-w-5xl'>Engineering the Future of <span className='bg-gradient-to-r from-[#5044E5] to-[#4d8cea] bg-clip-text
+          sl:leading-[95px] max-w-5xl'>Engineering the Future of <span className='bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text
           text-transparent'>Digital</span> Excellence</motion.h1>
       <motion.p
         initial={{ opacity: 0, y: 30 }}

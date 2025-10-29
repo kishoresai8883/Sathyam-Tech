@@ -106,7 +106,7 @@ const Contact = () => {
                 p-3 text-sm outline-none rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent' required/>
             </div>
             <button type='submit' className='w-max flex gap-2 bg-primary text-white
-            text-sm px-10 py-3 rounded-full cursor-pointer hover:scale-102 transition-all'>
+            text-sm px-10 py-3 rounded-md cursor-pointer hover:scale-102 transition-all'>
                 Submit <img src={assets.arrow_icon} alt="submit" className='w-4'/>
             </button>
         </motion.form>

@@ -6,9 +6,14 @@ import { motion } from 'motion/react'
 
 const servicesData = [
     {
-        title: "Website/App Development",
+        title: "Website Development",
         description: "We turn bold ideal into powerful digital solutions that connect, engage...",
         icon: assets.ads_icon
+    },
+    {
+        title: "App Development",
+        description: "We turn bold ideal into powerful digital solutions that connect, engage...",
+        icon: assets.marketing_icon
     },
     {
         title: "UI/UX Design",
@@ -17,11 +22,6 @@ const servicesData = [
     },
     {
         title: "Digital Marketing",
-        description: "We turn bold ideal into powerful digital solutions that connect, engage...",
-        icon: assets.marketing_icon
-    },
-    {
-        title: "Branding",
         description: "We turn bold ideal into powerful digital solutions that connect, engage...",
         icon: assets.ads_icon
     }

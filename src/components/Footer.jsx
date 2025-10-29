@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import assets from '../assets/assets'
 import { motion } from 'motion/react'
 import Logo from '../assets/STS-logo-bg-white.png'
@@ -21,21 +22,22 @@ const Footer = ({theme}) => {
           transition={{duration: 0.6, delay: 0.2}}
           viewport={{once: true}}
           className='space-y-5 text-sm text-gray-700 dark:text-gray-400'>
-          <img 
-            src={theme === 'dark' ? LogoBlk : Logo} 
-            alt="logo" 
-            className="w-32 sm:w-40"
-          />
-          
+          <Link to="/">
+            <img 
+              src={theme === 'dark' ? LogoBlk : Logo} 
+              alt="logo" 
+              className="w-32 sm:w-40"
+            />
+          </Link>
           <p className='max-w-md'>From strategy to execution, we craft digital solutions that move
             your business forward.
           </p>
 
           <ul className='flex gap-8'>
-            <li><a className='hover:text-primary' href='#hero'>Home</a></li>
-            <li><a className='hover:text-primary' href='#services'>Services</a></li>
-            <li><a className='hover:text-primary' href='#our-work'>Our Work</a></li>
-            <li><a className='hover:text-primary' href='#contact-us'>Contact Us</a></li>
+            <li><Link to="/" className='hover:text-primary'>Home</Link></li>
+            <li><Link to="/about" className='hover:text-primary'>About</Link></li>
+            <li><Link to="/services" className='hover:text-primary'>Services</Link></li>
+            <li><Link to="/contact" className='hover:text-primary'>Contact</Link></li>
           </ul>
         </motion.div>
         <motion.div 
