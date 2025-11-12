@@ -9,8 +9,12 @@
     font-weight: 500;
 }
 
-:root {
+@layer base {
+  :root {
     --color-primary: #5044E5;
+    --primary: 175 60% 38%;
+    --primary-foreground: 0 0% 100%;
+}
 }
 
 .animate-spin-slow {

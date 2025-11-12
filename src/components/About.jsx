@@ -3,12 +3,13 @@ import Title from './Title'
 import assets from '../assets/assets'
 import aboutImg from '../assets/hero_img1.jpg'
 import StarIcon from '@mui/icons-material/Star';
+//Our dedicated team are committed to your success, delivering tailored, scalable solutions that drive growth and efficiency. Your success is our focus.
 
 const About = () => {
   return (
     <div className='flex flex-col items-center gap-7 px-4
       sm:px-12 lg:px-24 xl:px-40 pt-28 text-gray-700 dark:text-white'>
-      <Title title="About Us" desc='Our dedicated team are committed to your success, delivering tailored, scalable solutions that drive growth and efficiency. Your success is our focus.' />
+      <Title title="About Us" desc='We’re a team of passionate web developers and designers dedicated to crafting user-friendly, high-performance websites that help businesses grow'/>
         <div className='grid md:grid-cols-2 gap-16'>
             <img src={aboutImg} alt="about img" className='border border-gray-100 shadow-xl shadow-gray-100 rounded-tr-[64px] rounded-bl-[64px]' />
             <div className='text-center'>

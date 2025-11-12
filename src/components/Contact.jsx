@@ -74,7 +74,7 @@ const Contact = () => {
                 <HomeIcon className='text-orange-500'/>
                 <div className='flex flex-col -mt-2'>
                     <h3 className='font-semiBold text-md'>Address</h3>
-                    <h3 className='font-semiBold text-md'>3rd Floor, Huda Layout, Hyderabad - 500018</h3>
+                    <h3 className='font-semiBold text-md'>2nd Floor, Huda Layout, Hyderabad - 500018</h3>
                 </div>
             </div>
         </motion.div>

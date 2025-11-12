@@ -12,42 +12,37 @@ const approaches = [
   {
     icon: StarIcon,
     title: "Our Mission",
-    description: "Our mission is to inspire and equip individuals and businesses",
+    description: "To empower businesses of all sizes with modern, scalable, and efficient digital solutions that simplify operations, attract customers, and drive measurable growth. We aim to make technology accessible, impactful, and tailored to every client’s unique vision."
   },
   {
     icon: StarIcon,
     title: "Our Vision",
-    description: "Our vision is to drive innovation for a brighter, sustainable future.",
-  },
-  {
-    icon: StarIcon,
-    title: "Our Value",
-    description: "Our values are rooted in integrity, empathy, and empowerment. We are committed to creating a supportive.",
+    description: "To be recognized as a trusted digital partner that transforms the way businesses connect with their audiences online — through creativity, technology, and innovation. We aspire to build long-term relationships by delivering exceptional results and continuous support.",
   },
 ];
 
 const steps = [
   {
     number: "1",
-    title: "Sign Up",
-    description: "Visit our website or download our app to sign up. Provide basic information to set up your secure account.",
+    title: "Ideation",
+    description: "We work with you from project planning, conducting research and uncovering user pain points all the way to producing a product concept that sacrifies market needs.",
     icon: StarIcon,
   },
   {
     number: "2",
-    title: "Set Up Your Profile",
-    description: "Add your personal or business details to tailor the platform to your specific needs.",
+    title: "Wireframing",
+    description: "It maps out the user journey and visualizes your end product. It's a vital preparatory blueprint that will define your website's structure, content and functionality.",
     icon: StarIcon,
   },
   {
     number: "3",
-    title: "Explore Features",
+    title: "Development",
     description: "Access your dashboard for a summary of your finances: balances, recent transactions, and insights.",
     icon: StarIcon,
   },
   {
     number: "4",
-    title: "Invest and Grow",
+    title: "Deploy & Maintain",
     description: "Discover a variety of investment opportunities tailored to your financial goals.",
     icon: StarIcon,
   },
@@ -145,16 +140,19 @@ export const About = () => {
               <p className="text-[#e77504] text-sm font-semibold tracking-wider uppercase mb-4">
                 // ABOUT US
               </p>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Expert guidance and{" "}
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-loose">
+                Empowering Businesses Through{" "}
+                <span className="text-accent text-6xl"></span>
                 <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
-                  personalized coaching.
+                  Digital Solutions
                 </span>
               </h1>
 
               <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                Receive tailored coaching that empowers you to navigate challenges and achieve your
-                personal and professional goals. With expert guidance.
+                At <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
+                  Sathyam Tech Solutions,
+                </span> we transform ideas into powerful digital experiences. We’re a modern web development agency that helps local businesses, startups, and eCommerce brands grow through innovative web and mobile solutions.
+                With a perfect blend of design, technology, and strategy, our team delivers user-friendly websites, high-performing web apps, and result-driven SEO campaigns that elevate your online presence and help you stand out in the digital crowd.
               </p>
 
               <div className="space-y-4 mb-8">
@@ -181,48 +179,33 @@ export const About = () => {
                   Get In Touch
                   <img src={assets.arrow_icon} className="w-5 h-5" />
                 </button>
-
-                <div className="flex items-center gap-3">
-                  <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-lg">
-                    <StarIcon className="w-8 h-8" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-foreground">Creative Result</p>
-                    <p className="text-sm text-muted-foreground">Award Wining</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
       <section className="py-20 px-6 bg-background relative">
-        <div className="container mx-auto max-w-7xl">
-          {/* Contact Us button - top right */}
-          <p className="text-[#e77504] text-sm font-semibold tracking-wider uppercase mb-4">
+        <p className="text-[#e77504] text-sm text-center font-semibold tracking-wider uppercase mb-4">
             // OUR APPROACH
           </p>
-          <h2 className="text-4xl md:text-6xl font-bold mb-4 max-w-4xl">
-            Empowering growth through{" "}
+          <h2 className="text-4xl md:text-5xl text-center font-bold mb-4">
+            We Turn Ideas into Interactive{" "}
             <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
-              personalized guidance
+              Experiences
             </span>
-            <span className="text-accent text-6xl">.</span>
+            <span className="text-[#f0a510] text-6xl">.</span>
           </h2>
+        <div className="container mx-auto max-w-7xl">
+          {/* Contact Us button - top right */}
+          
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-12">
             {/* Left side - Content */}
             <div>
-              <p className="text-muted-foreground text-lg mb-12 leading-relaxed">
-                At the heart of our coaching philosophy is a commitment to empowering individuals
-                and businesses to reach their fullest potential. We provide personalized, one-on-one
-                guidance tailored to your unique goals and challenges.
-              </p>
-
               <div className="space-y-8">
                 {approaches.map((item, index) => (
                   <div key={index}>
-                    <div className="flex items-start gap-4">
+                    <div className="flex items-center gap-4">
                       <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center flex-shrink-0 shadow-lg">
                         <item.icon className="w-8 h-8" />
                       </div>
@@ -258,14 +241,17 @@ export const About = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <p className="text-[#e77504] text-sm font-semibold tracking-wider uppercase mb-4">
-              HOW IT WORKS
+              // HOW IT WORKS
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
-              How It Works
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Driven by Code, Powered by{" "}
+              <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
+                Passion
+              </span>
+              <span className="text-[#f0a510] text-6xl">.</span>
             </h2>
             <p className="mt-4 text-muted-foreground text-lg max-w-3xl mx-auto">
-              Our platform is designed to make managing your finances simple and
-              efficient. Follow these easy steps to get started:
+              From idea to execution, we deliver web solutions that inspire trust, boost visibility, and drive results.
             </p>
           </div>
 
@@ -293,26 +279,39 @@ export const About = () => {
       </section>
       <section className="py-20 px-6 bg-secondary/30">
         <div className="container mx-auto max-w-7xl">
-          <p className="text-[#e77504] text-sm font-semibold tracking-wider uppercase mb-4">
+          <p className="text-[#e77504] text-sm text-center font-semibold tracking-wider uppercase mb-4">
             // WHY CHOOSE US ?
           </p>
-
+          <h2 className="text-4xl md:text-5xl text-center font-bold mb-6">
+            Every line of code we write is focused on one goal that is your {" "}
+            <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
+              Online Success
+            </span>
+          </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Left side - Content */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Personalized coaching tailored to{" "}
-                <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
-                  your needs
-                </span>
-              </h2>
-
-              <p className="text-muted-foreground text-lg mb-12 leading-relaxed">
-                We understand that no two clients are the same. That's why we create personalized
-                coaching plans designed to address your specific challenges and goals. Whether
-                you're focusing on personal growth or business development, our tailored approach
-                ensures you get the exact guidance you need to succeed.
-              </p>
+              <div className="mb-8">
+                <h3 className="text-2xl font-bold mb-2 text-foreground">
+                  💻 Modern Development Approach
+                </h3>
+                <p className="text-muted-foreground mb-2">
+                  We build responsive, fast, and secure digital products using the latest technologies.
+                </p>
+                <h3 className="text-2xl font-bold mb-2 text-foreground">
+                  🚀 Growth-Oriented Strategies
+                </h3>
+                <p className="text-muted-foreground mb-2">
+                  Every solution we create is focused on your business growth and customer engagement.
+                </p>
+                <h3 className="text-2xl font-bold mb-2 text-foreground">
+                  🤝 Trusted Partnership
+                </h3>
+                <p className="text-muted-foreground">
+                  We work closely with you to understand your goals and bring your vision to life with precision and passion.
+                </p>
+              </div>
+              
 
               {/* Progress bars */}
               <div className="space-y-8">
@@ -327,9 +326,9 @@ export const About = () => {
                 <div>
                   <div className="flex items-center justify-between mb-3">
                     <p className="font-semibold text-foreground text-lg">Projects Completed Ratio</p>
-                    <p className="font-bold text-foreground text-lg">65%</p>
+                    <p className="font-bold text-foreground text-lg">76%</p>
                   </div>
-                  <ProgressBar value={65} className="h-3" />
+                  <ProgressBar value={76} className="h-3" />
                 </div>
               </div>
             </div>
@@ -357,21 +356,16 @@ export const About = () => {
         </div>
       </section>
       <section className="py-20 px-6 bg-background">
+        <p className="text-[#e77504] text-sm text-center font-semibold tracking-wider uppercase mb-4">
+          // OUR TEAM
+        </p>
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
+          Experienced coaches{" "}
+          <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
+            dedicated to you
+          </span>
+        </h2>
         <div className="container mx-auto max-w-7xl">
-          <div className="flex items-center justify-between mb-12">
-            <div>
-              <p className="text-[#e77504] text-sm font-semibold tracking-wider uppercase mb-4">
-                // OUR TEAM
-              </p>
-              <h2 className="text-4xl md:text-5xl font-bold">
-                Experienced coaches{" "}
-                <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
-                  dedicated to you
-                </span>
-              </h2>
-            </div>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member) => (
               <div
@@ -389,22 +383,22 @@ export const About = () => {
                   
                   {/* Overlay on hover */}
                   {hoveredCard === member.id && (
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#a8f8cf] via-[#82e7f0] to-transparent flex items-center justify-center">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#e77504] via-[#f0a510]/50 to-transparent flex items-center justify-center">
                       <div className="text-center">
-                        <div className="w-24 h-24 rounded-full bg-gradient-to-r from-[#e77504] to-[#f0a510] backdrop-blur-sm flex items-center justify-center mb-6 mx-auto">
+                        <div className="w-24 h-24 rounded-full bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center mb-6 mx-auto">
                           <p className="text-primary-foreground font-bold text-lg">View</p>
                         </div>
                         <div className="flex items-center justify-center gap-4">
-                          <button className="w-12 h-12 rounded-full bg-gradient-to-r backdrop-blur-sm flex items-center justify-center hover:bg-black transition-all duration-300">
-                            <img src={assets.linkedin_icon} alt="linkedin icon" className='bg-black hover:invert' />
+                          <button className="w-12 h-12 rounded-full bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center hover:bg-black transition-all duration-300">
+                            <img src={assets.linkedin_icon} alt="linkedin icon" className='hover:invert' />
                           </button>
-                          <button className="w-12 h-12 rounded-full bg-gradient-to-r from-[#e77504] to-[#f0a510] backdrop-blur-sm flex items-center justify-center hover:bg-black transition-all duration-300">
-                            <img src={assets.instagram_icon} alt="instagram icon" className='bg-black hover:invert' />
+                          <button className="w-12 h-12 rounded-full bg-primary-foreground/20 from-[#e77504] to-[#f0a510] backdrop-blur-sm flex items-center justify-center hover:bg-black transition-all duration-300">
+                            <img src={assets.instagram_icon} alt="instagram icon" className='hover:invert' />
                           </button>
-                          <button className="w-12 h-12 rounded-full bg-gradient-to-r from-[#e77504] to-[#f0a510] backdrop-blur-sm flex items-center justify-center hover:bg-primary-foreground/30 transition-colors">
+                          <button className="w-12 h-12 rounded-full bg-primary-foreground/20 from-[#e77504] to-[#f0a510] backdrop-blur-sm flex items-center justify-center hover:bg-primary-foreground/30 transition-colors">
                             <img src={assets.twitter_icon} className='bg-primary-foreground' alt="twitter icon" />
                           </button>
-                          <button className="w-12 h-12 rounded-full bg-gradient-to-r from-[#e77504] to-[#f0a510] backdrop-blur-sm flex items-center justify-center hover:bg-primary-foreground/30 transition-colors">
+                          <button className="w-12 h-12 rounded-full bg-primary-foreground/20 from-[#e77504] to-[#f0a510] backdrop-blur-sm flex items-center justify-center hover:bg-primary-foreground/30 transition-colors">
                             <img src={assets.facebook_icon} className='bg-primary-foreground' alt="facebook icon" />
                           </button>
                         </div>

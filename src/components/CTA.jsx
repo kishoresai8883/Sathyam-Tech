@@ -16,10 +16,11 @@ const CTA = () => {
             className="lg:col-span-3"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight text-white">
-              Perfect for bringing the world closer together.
+              Let’s Build Something Great Together
             </h2>
             <p className="text-lg text-white mb-8 max-w-2xl">
-              Your goals are our roadmap. Let’s build something great side by side.
+              Your website is more than just an online presence — it’s your brand’s first impression.
+              At <span className='text-[#e77504]'>Sathyam Tech Solutions,</span> we ensure it’s a lasting one.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
