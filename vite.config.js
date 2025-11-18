@@ -6,7 +6,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: "/Sathyam-Tech/",
   server: {
-    allowedHosts: ['sathyam-tech.onrender.com']
+    allowedHosts: ['sathyamtechsolutions.com']
   },
   plugins: [
     react(),
