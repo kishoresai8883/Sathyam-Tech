@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import bgImg from '../assets/hero-bg-img.webp';
+import bgImg from '../assets/Hero-bg-img.webp';
 
 const CTA = () => {
   return (
