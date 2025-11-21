@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import hero from '../assets/about_hero.png'
+import hero from '../assets/about_hero.webp'
 
 const Contact = () => {
   return (

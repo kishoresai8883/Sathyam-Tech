@@ -3,8 +3,12 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Title from '../components/Title'
 import assets from '../assets/assets'
-import aboutImg from '../assets/hero_img1.jpg'
-import hero from '../assets/about_hero.png'
+import aboutImg from '../assets/hero_img1.webp'
+import aboutImg1 from '../assets/about1.webp'
+import aboutImg2 from '../assets/about3.webp'
+import hero from '../assets/about_hero.webp'
+import WhyChoose from '../assets/why_choose.webp'
+import Approach from '../assets/approach.webp'
 import StarIcon from '@mui/icons-material/Star';
 import ProgressBar from '../components/Progressbar'
 
@@ -118,7 +122,7 @@ export const About = () => {
                 {/* Main image */}
                 <div className="relative">
                   <img
-                    src={aboutImg}
+                    src={aboutImg1}
                     alt="Professional coaching consultation"
                     className="w-full h-full rounded-3xl shadow-2xl"
                   />
@@ -127,7 +131,7 @@ export const About = () => {
                 {/* Bottom right portrait */}
                 <div className="absolute -bottom-8 -right-8 w-64 h-52 rounded-3xl overflow-hidden shadow-2xl border-4 border-background">
                   <img
-                    src={aboutImg}
+                    src={aboutImg2}
                     alt="Business professional"
                     className="w-full h-full object-cover"
                   />
@@ -229,7 +233,7 @@ export const About = () => {
             {/* Right side - Image */}
             <div className="relative">
               <img
-                src={aboutImg}
+                src={Approach}
                 alt="Team meeting and collaboration"
                 className="w-full h-full object-cover rounded-3xl shadow-2xl"
               />
@@ -347,7 +351,7 @@ export const About = () => {
               </div>
 
               <img
-                src={aboutImg}
+                src={WhyChoose}
                 alt="Team celebrating success"
                 className="w-full rounded-3xl shadow-2xl"
               />

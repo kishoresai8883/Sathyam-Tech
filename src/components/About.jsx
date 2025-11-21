@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Title from './Title'
 import assets from '../assets/assets'
-import aboutImg from '../assets/hero_img1.jpg'
+import aboutImg from '../assets/about.webp'
 import StarIcon from '@mui/icons-material/Star';
 //Our dedicated team are committed to your success, delivering tailored, scalable solutions that drive growth and efficiency. Your success is our focus.
 
