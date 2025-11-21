@@ -296,26 +296,46 @@ export const About = () => {
             {/* Left side - Content */}
             <div>
               <div className="mb-8">
-                <h3 className="text-2xl font-bold mb-2 text-foreground">
-                  💻 Modern Development Approach
-                </h3>
-                <p className="text-muted-foreground mb-2">
-                  We build responsive, fast, and secure digital products using the latest technologies.
-                </p>
-                <h3 className="text-2xl font-bold mb-2 text-foreground">
-                  🚀 Growth-Oriented Strategies
-                </h3>
-                <p className="text-muted-foreground mb-2">
-                  Every solution we create is focused on your business growth and customer engagement.
-                </p>
-                <h3 className="text-2xl font-bold mb-2 text-foreground">
-                  🤝 Trusted Partnership
-                </h3>
-                <p className="text-muted-foreground">
-                  We work closely with you to understand your goals and bring your vision to life with precision and passion.
-                </p>
+                <div className='flex'>
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <StarIcon className="w-8 h-8" />
+                  </div>
+                  <div className='ml-4'>
+                    <h3 className="text-2xl font-bold mb-2 text-foreground">
+                    Modern Development Approach
+                  </h3>
+                  <p className="text-muted-foreground mb-2">
+                    We build responsive, fast, and secure digital products using the latest technologies.
+                  </p>
+                  </div>
+                </div>
+                <div className='flex'>
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <StarIcon className="w-8 h-8" />
+                  </div>
+                  <div className='ml-4'>
+                    <h3 className="text-2xl font-bold mb-2 text-foreground">
+                    Growth-Oriented Strategies
+                  </h3>
+                  <p className="text-muted-foreground mb-2">
+                    Every solution we create is focused on your business growth and customer engagement.
+                  </p>
+                  </div>
+                </div>
+                <div className='flex'>
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center flex-shrink-0 shadow-lg">
+                    <StarIcon className="w-8 h-8" />
+                  </div>
+                  <div className='ml-4'>
+                    <h3 className="text-2xl font-bold mb-2 text-foreground">
+                    Trusted Partnership
+                  </h3>
+                  <p className="text-muted-foreground mb-2">
+                    We work closely with you to understand your goals and bring your vision to life with precision and passion.
+                  </p>
+                  </div>
+                </div>
               </div>
-              
 
               {/* Progress bars */}
               <div className="space-y-8">
