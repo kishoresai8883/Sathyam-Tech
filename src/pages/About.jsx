@@ -58,18 +58,33 @@ const team = [
     image: aboutImg,
     name: "Kishore",
     role: "Founder",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/kishore-sai",
+      instagram: "https://instagram.com/kishoresai_g",
+      twitter: "https://twitter.com/Sai207Sai",
+    }
   },
   {
     id: 2,
     image: aboutImg,
     name: "Sai",
     role: "Developer",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/kishore-sai",
+      instagram: "https://instagram.com/kishoresai_g",
+      twitter: "https://twitter.com/Sai207Sai",
+    }
   },
   {
     id: 3,
     image: aboutImg,
     name: "Kishore Sai",
     role: "Manager",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/kishore-sai",
+      instagram: "https://instagram.com/kishoresai_g",
+      twitter: "https://twitter.com/Sai207Sai",
+    }
   },
 ];
 
@@ -101,7 +116,7 @@ export const About = () => {
           </nav>
         </div>
       </section>
-      <section className="py-12 md:py-20 px-4 md:px-6 bg-secondary/30 overflow-hidden">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-secondary/30 dark:bg-gray-900/30 overflow-hidden">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left side - Images */}
@@ -128,7 +143,7 @@ export const About = () => {
                 </div>
 
                 {/* Bottom right portrait */}
-                <div className="absolute -bottom-6 -right-2 md:-bottom-8 md:-right-8 w-48 md:w-64 h-40 md:h-52 rounded-3xl overflow-hidden shadow-2xl border-4 border-background">
+                <div className="absolute -bottom-6 -right-2 md:-bottom-8 md:-right-8 w-48 md:w-64 h-40 md:h-52 rounded-3xl overflow-hidden shadow-2xl border-4 border-background dark:border-gray-800">
                   <img
                     src={aboutImg2}
                     alt="Business professional"
@@ -143,15 +158,14 @@ export const About = () => {
               <p className="text-[#e77504] text-sm font-semibold tracking-wider uppercase mb-4">
                 // ABOUT US
               </p>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight md:leading-loose">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight md:leading-loose text-foreground dark:text-white">
                 Empowering Businesses Through{" "}
-                <span className="text-accent text-6xl"></span>
                 <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
                   Digital Solutions
                 </span>
               </h1>
 
-              <p className="text-muted-foreground text-base md:text-lg mb-8 leading-relaxed">
+              <p className="text-muted-foreground dark:text-gray-300 text-base md:text-lg mb-8 leading-relaxed">
                 At <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
                   Sathyam Tech Solutions,
                 </span> we transform ideas into powerful digital experiences. We’re a modern web development agency that helps local businesses, startups, and eCommerce brands grow through innovative web and mobile solutions.
@@ -161,17 +175,17 @@ export const About = () => {
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center">
-                    <StarIcon className="w-4 h-4 text-accent" />
+                    <StarIcon className="w-4 h-4 text-accent dark:text-white" />
                   </div>
-                  <p className="text-foreground font-semibold text-base md:text-lg">
+                  <p className="text-foreground dark:text-white font-semibold text-base md:text-lg">
                     Goal Setting And Accountability
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center">
-                    <StarIcon className="w-4 h-4 text-accent" />
+                    <StarIcon className="w-4 h-4 text-accent dark:text-white" />
                   </div>
-                  <p className="text-foreground font-semibold text-base md:text-lg">
+                  <p className="text-foreground dark:text-white font-semibold text-base md:text-lg">
                     Mindset And Confidence Building
                   </p>
                 </div>
@@ -187,16 +201,15 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <section className="py-12 md:py-20 px-4 md:px-6 bg-background relative">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-background dark:bg-black relative">
         <p className="text-[#e77504] text-sm text-center font-semibold tracking-wider uppercase mb-4">
             // OUR APPROACH
         </p>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-4">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-4 text-foreground dark:text-white">
           We Turn Ideas into Interactive{" "}
           <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
-            Experiences
+            Experiences.
           </span>
-          <span className="text-[#f0a510] text-6xl">.</span>
         </h2>
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mt-12">
@@ -210,16 +223,16 @@ export const About = () => {
                         <item.icon className="w-6 h-6 md:w-8 md:h-8" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground">
+                        <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground dark:text-white">
                           {item.title}
                         </h3>
-                        <p className="text-muted-foreground text-sm md:text-base">
+                        <p className="text-muted-foreground dark:text-gray-300 text-sm md:text-base">
                           {item.description}
                         </p>
                       </div>
                     </div>
                     {index < approaches.length - 1 && (
-                      <div className="ml-7 md:ml-8 mt-6 mb-2 h-px bg-border"></div>
+                      <div className="ml-7 md:ml-8 mt-6 mb-2 h-px bg-border dark:bg-gray-700"></div>
                     )}
                   </div>
                 ))}
@@ -237,20 +250,19 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <section className="py-12 md:py-20 px-4 md:px-6 bg-background">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-background dark:bg-black">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-12 md:mb-16">
             <p className="text-[#e77504] text-sm font-semibold tracking-wider uppercase mb-4">
               // HOW IT WORKS
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-foreground dark:text-white">
               Driven by Code, Powered by{" "}
               <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
-                Passion
+                Passion.
               </span>
-              <span className="text-[#f0a510] text-6xl">.</span>
             </h2>
-            <p className="mt-4 text-muted-foreground text-base md:text-lg max-w-3xl mx-auto">
+            <p className="mt-4 text-muted-foreground dark:text-gray-300 text-base md:text-lg max-w-3xl mx-auto">
               From idea to execution, we deliver web solutions that inspire trust, boost visibility, and drive results.
             </p>
           </div>
@@ -261,14 +273,14 @@ export const About = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
               {steps.map((step, index) => (
-                <div key={index} className="flex flex-col items-center text-center bg-white dark:bg-gray-900/50 p-6 rounded-xl md:bg-transparent md:p-0">
+                <div key={index} className="flex flex-col items-center text-center bg-white dark:bg-transparent p-6 rounded-xl md:bg-transparent md:p-0">
                   <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-r from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center text-2xl font-bold mb-6 shadow-lg">
                     {step.number}
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-foreground">
+                  <h3 className="text-xl font-bold mb-3 text-foreground dark:text-white">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-muted-foreground dark:text-gray-300 text-sm">
                     {step.description}
                   </p>
                 </div>
@@ -277,12 +289,12 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <section className="py-12 md:py-20 px-4 md:px-6 bg-secondary/30 overflow-hidden">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-secondary/30 dark:bg-gray-900/30 overflow-hidden">
         <div className="container mx-auto max-w-7xl">
           <p className="text-[#e77504] text-sm text-center font-semibold tracking-wider uppercase mb-4">
             // WHY CHOOSE US ?
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-6 text-foreground dark:text-white">
             Every line of code we write is focused on one goal that is your {" "}
             <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
               Online Success
@@ -297,10 +309,10 @@ export const About = () => {
                     <StarIcon className="w-6 h-6 md:w-8 md:h-8" />
                   </div>
                   <div className='ml-4'>
-                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground">
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground dark:text-white">
                       Modern Development Approach
                     </h3>
-                    <p className="text-muted-foreground mb-2 text-sm md:text-base">
+                    <p className="text-muted-foreground dark:text-gray-300 mb-2 text-sm md:text-base">
                       We build responsive, fast, and secure digital products using the latest technologies.
                     </p>
                   </div>
@@ -310,10 +322,10 @@ export const About = () => {
                     <StarIcon className="w-6 h-6 md:w-8 md:h-8" />
                   </div>
                   <div className='ml-4'>
-                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground">
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground dark:text-white">
                       Growth-Oriented Strategies
                     </h3>
-                    <p className="text-muted-foreground mb-2 text-sm md:text-base">
+                    <p className="text-muted-foreground dark:text-gray-300 mb-2 text-sm md:text-base">
                       Every solution we create is focused on your business growth and customer engagement.
                     </p>
                   </div>
@@ -323,10 +335,10 @@ export const About = () => {
                     <StarIcon className="w-6 h-6 md:w-8 md:h-8" />
                   </div>
                   <div className='ml-4'>
-                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground">
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground dark:text-white">
                       Trusted Partnership
                     </h3>
-                    <p className="text-muted-foreground mb-2 text-sm md:text-base">
+                    <p className="text-muted-foreground dark:text-gray-300 mb-2 text-sm md:text-base">
                       We work closely with you to understand your goals and bring your vision to life with precision and passion.
                     </p>
                   </div>
@@ -337,16 +349,16 @@ export const About = () => {
               <div className="space-y-8">
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <p className="font-semibold text-foreground text-lg">Client Success Rattings</p>
-                    <p className="font-bold text-foreground text-lg">90%</p>
+                    <p className="font-semibold text-foreground dark:text-white text-lg">Client Success Rattings</p>
+                    <p className="font-bold text-foreground dark:text-white text-lg">90%</p>
                   </div>
                   <ProgressBar value={90} className="h-3" />
                 </div>
 
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <p className="font-semibold text-foreground text-lg">Projects Completed Ratio</p>
-                    <p className="font-bold text-foreground text-lg">76%</p>
+                    <p className="font-semibold text-foreground dark:text-white text-lg">Projects Completed Ratio</p>
+                    <p className="font-bold text-foreground dark:text-white text-lg">76%</p>
                   </div>
                   <ProgressBar value={76} className="h-3" />
                 </div>
@@ -355,22 +367,6 @@ export const About = () => {
 
             {/* Right side - Image with circular text */}
             <div className="relative mt-8 lg:mt-0">
-              {/* Circular text overlay */}
-              <div className="absolute -top-6 -right-2 md:-top-8 md:-right-8 w-32 h-32 md:w-48 md:h-48 z-10">
-                <svg viewBox="0 0 200 200" className="animate-spin-slow w-full h-full">
-                  <path
-                    id="circlePath"
-                    d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
-                    fill="none"
-                  />
-                  <text fill="#e77504" fontWeight="bold">
-                    <textPath href="#circlePath" startOffset="0%">
-                      YEARS OF EXCELLENCE • YEARS OF EXCELLENCE •
-                    </textPath>
-                  </text>
-                </svg>
-              </div>
-
               <img
                 src={WhyChoose}
                 alt="Team celebrating success"
@@ -380,11 +376,11 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <section className="py-12 md:py-20 px-4 md:px-6 bg-background">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-background dark:bg-black">
         <p className="text-[#e77504] text-sm text-center font-semibold tracking-wider uppercase mb-4">
           // OUR TEAM
         </p>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 text-foreground dark:text-white">
           Experienced coaches{" "}
           <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
             dedicated to you
@@ -415,24 +411,44 @@ export const About = () => {
                         <p className="text-white font-bold text-lg tracking-wider">View</p>
                       </div>
                       <div className="flex items-center justify-center gap-3">
-                        {[assets.linkedin_icon, assets.instagram_icon, assets.twitter_icon, assets.facebook_icon].map((icon, i) => (
-                          <motion.button
-                            key={i}
-                            whileHover={{ scale: 1.1, rotate: 5 }}
-                            whileTap={{ scale: 0.95 }}
-                            className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white transition-all duration-300 group/btn"
-                          >
-                            <img src={icon} alt="social icon" className="w-5 h-5 group-hover/btn:invert transition-all duration-300" />
-                          </motion.button>
-                        ))}
+                        <motion.a
+                          href={member.socials.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white transition-all duration-300 group/btn"
+                        >
+                          <img src={assets.linkedin_icon} alt="linkedin" className="w-5 h-5 group-hover/btn:invert transition-all duration-300" />
+                        </motion.a>
+                        <motion.a
+                          href={member.socials.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white transition-all duration-300 group/btn"
+                        >
+                          <img src={assets.instagram_icon} alt="instagram" className="w-5 h-5 group-hover/btn:invert transition-all duration-300" />
+                        </motion.a>
+                        <motion.a
+                          href={member.socials.twitter}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white transition-all duration-300 group/btn"
+                        >
+                          <img src={assets.twitter_icon} alt="twitter" className="w-5 h-5 group-hover/btn:invert transition-all duration-300" />
+                        </motion.a>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-6 text-center">
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-[#e77504] transition-colors duration-300">{member.name}</h3>
-                  <p className="text-muted-foreground">{member.role}</p>
+                  <h3 className="text-xl font-bold text-foreground dark:text-white group-hover:text-[#e77504] transition-colors duration-300">{member.name}</h3>
+                  <p className="text-muted-foreground dark:text-gray-400">{member.role}</p>
                 </div>
               </motion.div>
             ))}
