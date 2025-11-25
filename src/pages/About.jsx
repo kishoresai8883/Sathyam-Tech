@@ -74,25 +74,24 @@ const team = [
 ];
 
 export const About = () => {
-  const [hoveredCard, setHoveredCard] = useState(null);
   return (
     <>
-      <section 
-        className="relative h-[400px] w-full bg-cover bg-center flex items-center"
+      <section
+        className="relative h-[300px] md:h-[400px] w-full bg-cover bg-center flex items-center"
         style={{ backgroundImage: `url(${hero})` }}
       >
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#1a4d4d]/95 via-[#1a4d4d]/85 to-[#1a4d4d]/75"></div>
-        
+
         {/* Content */}
         <div className="container mx-auto max-w-7xl px-6 relative z-10">
-          <h1 className="text-5xl md:text-7xl font-light mb-6 text-white">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-light mb-6 text-white">
             About <span className="text-[#e77504] font-light">us</span>
           </h1>
-          
+
           <nav className="flex items-center gap-3 text-sm tracking-wider">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="text-white hover:text-primary transition-colors font-semibold"
             >
               HOME
@@ -102,21 +101,21 @@ export const About = () => {
           </nav>
         </div>
       </section>
-      <section className="py-20 px-6 bg-secondary/30">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-secondary/30 overflow-hidden">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left side - Images */}
-            <div className="relative">
-              <div className="relative ml-12">
+            <div className="relative mb-10 lg:mb-0">
+              <div className="relative md:ml-12">
                 {/* Experience badge */}
-                <div className="absolute -top-6 -left-6 z-20 bg-gradient-to-br from-[#e77504] to-[#f0a510] rounded-3xl p-6 shadow-xl">
+                <div className="absolute -top-4 -left-2 md:-top-6 md:-left-6 z-20 bg-gradient-to-br from-[#e77504] to-[#f0a510] rounded-3xl p-4 md:p-6 shadow-xl scale-90 md:scale-100 origin-top-left">
                   <div className="flex items-center gap-2 mb-2">
                     <div className="w-8 h-8 rounded-full border-2 border-primary-foreground/50 flex items-center justify-center">
                       <StarIcon className="w-4 h-4" />
                     </div>
                   </div>
-                  <p className="text-xl font-bold">2+ years of</p>
-                  <p className="text-xl font-bold">experience</p>
+                  <p className="text-lg md:text-xl font-bold">2+ years of</p>
+                  <p className="text-lg md:text-xl font-bold">experience</p>
                 </div>
 
                 {/* Main image */}
@@ -129,7 +128,7 @@ export const About = () => {
                 </div>
 
                 {/* Bottom right portrait */}
-                <div className="absolute -bottom-8 -right-8 w-64 h-52 rounded-3xl overflow-hidden shadow-2xl border-4 border-background">
+                <div className="absolute -bottom-6 -right-2 md:-bottom-8 md:-right-8 w-48 md:w-64 h-40 md:h-52 rounded-3xl overflow-hidden shadow-2xl border-4 border-background">
                   <img
                     src={aboutImg2}
                     alt="Business professional"
@@ -140,11 +139,11 @@ export const About = () => {
             </div>
 
             {/* Right side - Content */}
-            <div className="lg:pl-8">
+            <div className="lg:pl-8 mt-8 lg:mt-0">
               <p className="text-[#e77504] text-sm font-semibold tracking-wider uppercase mb-4">
                 // ABOUT US
               </p>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-loose">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight md:leading-loose">
                 Empowering Businesses Through{" "}
                 <span className="text-accent text-6xl"></span>
                 <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
@@ -152,7 +151,7 @@ export const About = () => {
                 </span>
               </h1>
 
-              <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+              <p className="text-muted-foreground text-base md:text-lg mb-8 leading-relaxed">
                 At <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
                   Sathyam Tech Solutions,
                 </span> we transform ideas into powerful digital experiences. We’re a modern web development agency that helps local businesses, startups, and eCommerce brands grow through innovative web and mobile solutions.
@@ -164,7 +163,7 @@ export const About = () => {
                   <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center">
                     <StarIcon className="w-4 h-4 text-accent" />
                   </div>
-                  <p className="text-foreground font-semibold text-lg">
+                  <p className="text-foreground font-semibold text-base md:text-lg">
                     Goal Setting And Accountability
                   </p>
                 </div>
@@ -172,7 +171,7 @@ export const About = () => {
                   <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center">
                     <StarIcon className="w-4 h-4 text-accent" />
                   </div>
-                  <p className="text-foreground font-semibold text-lg">
+                  <p className="text-foreground font-semibold text-base md:text-lg">
                     Mindset And Confidence Building
                   </p>
                 </div>
@@ -188,42 +187,39 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <section className="py-20 px-6 bg-background relative">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-background relative">
         <p className="text-[#e77504] text-sm text-center font-semibold tracking-wider uppercase mb-4">
             // OUR APPROACH
-          </p>
-          <h2 className="text-4xl md:text-5xl text-center font-bold mb-4">
-            We Turn Ideas into Interactive{" "}
-            <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
-              Experiences
-            </span>
-            <span className="text-[#f0a510] text-6xl">.</span>
-          </h2>
+        </p>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-4">
+          We Turn Ideas into Interactive{" "}
+          <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
+            Experiences
+          </span>
+          <span className="text-[#f0a510] text-6xl">.</span>
+        </h2>
         <div className="container mx-auto max-w-7xl">
-          {/* Contact Us button - top right */}
-          
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mt-12">
             {/* Left side - Content */}
-            <div>
+            <div className="order-2 lg:order-1">
               <div className="space-y-8">
                 {approaches.map((item, index) => (
                   <div key={index}>
-                    <div className="flex items-center gap-4">
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center flex-shrink-0 shadow-lg">
-                        <item.icon className="w-8 h-8" />
+                    <div className="flex items-start md:items-center gap-4">
+                      <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center flex-shrink-0 shadow-lg">
+                        <item.icon className="w-6 h-6 md:w-8 md:h-8" />
                       </div>
                       <div className="flex-1">
-                        <h3 className="text-2xl font-bold mb-2 text-foreground">
+                        <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground">
                           {item.title}
                         </h3>
-                        <p className="text-muted-foreground">
+                        <p className="text-muted-foreground text-sm md:text-base">
                           {item.description}
                         </p>
                       </div>
                     </div>
                     {index < approaches.length - 1 && (
-                      <div className="ml-8 mt-6 mb-2 h-px bg-border"></div>
+                      <div className="ml-7 md:ml-8 mt-6 mb-2 h-px bg-border"></div>
                     )}
                   </div>
                 ))}
@@ -231,7 +227,7 @@ export const About = () => {
             </div>
 
             {/* Right side - Image */}
-            <div className="relative">
+            <div className="relative order-1 lg:order-2 h-[300px] md:h-auto">
               <img
                 src={Approach}
                 alt="Team meeting and collaboration"
@@ -241,20 +237,20 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <section className="py-20 px-6 bg-background">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-background">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <p className="text-[#e77504] text-sm font-semibold tracking-wider uppercase mb-4">
               // HOW IT WORKS
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               Driven by Code, Powered by{" "}
               <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
                 Passion
               </span>
               <span className="text-[#f0a510] text-6xl">.</span>
             </h2>
-            <p className="mt-4 text-muted-foreground text-lg max-w-3xl mx-auto">
+            <p className="mt-4 text-muted-foreground text-base md:text-lg max-w-3xl mx-auto">
               From idea to execution, we deliver web solutions that inspire trust, boost visibility, and drive results.
             </p>
           </div>
@@ -263,16 +259,16 @@ export const About = () => {
             {/* Dashed line connecting circles */}
             <div className="hidden md:block absolute top-10 left-0 right-0 h-0.5 border-t-2 border-dashed border-[#f0a510] z-0"></div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
               {steps.map((step, index) => (
-                <div key={index} className="flex flex-col items-center text-center">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center text-2xl font-bold mb-6 shadow-lg">
+                <div key={index} className="flex flex-col items-center text-center bg-white dark:bg-gray-900/50 p-6 rounded-xl md:bg-transparent md:p-0">
+                  <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-r from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center text-2xl font-bold mb-6 shadow-lg">
                     {step.number}
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-foreground">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground text-sm">
                     {step.description}
                   </p>
                 </div>
@@ -281,58 +277,58 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <section className="py-20 px-6 bg-secondary/30">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-secondary/30 overflow-hidden">
         <div className="container mx-auto max-w-7xl">
           <p className="text-[#e77504] text-sm text-center font-semibold tracking-wider uppercase mb-4">
             // WHY CHOOSE US ?
           </p>
-          <h2 className="text-4xl md:text-5xl text-center font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-6">
             Every line of code we write is focused on one goal that is your {" "}
             <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
               Online Success
             </span>
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mt-10">
             {/* Left side - Content */}
             <div>
-              <div className="mb-8">
-                <div className='flex'>
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center flex-shrink-0 shadow-lg">
-                    <StarIcon className="w-8 h-8" />
+              <div className="mb-8 space-y-6">
+                <div className='flex items-start'>
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center flex-shrink-0 shadow-lg mt-1">
+                    <StarIcon className="w-6 h-6 md:w-8 md:h-8" />
                   </div>
                   <div className='ml-4'>
-                    <h3 className="text-2xl font-bold mb-2 text-foreground">
-                    Modern Development Approach
-                  </h3>
-                  <p className="text-muted-foreground mb-2">
-                    We build responsive, fast, and secure digital products using the latest technologies.
-                  </p>
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground">
+                      Modern Development Approach
+                    </h3>
+                    <p className="text-muted-foreground mb-2 text-sm md:text-base">
+                      We build responsive, fast, and secure digital products using the latest technologies.
+                    </p>
                   </div>
                 </div>
-                <div className='flex'>
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center flex-shrink-0 shadow-lg">
-                    <StarIcon className="w-8 h-8" />
+                <div className='flex items-start'>
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center flex-shrink-0 shadow-lg mt-1">
+                    <StarIcon className="w-6 h-6 md:w-8 md:h-8" />
                   </div>
                   <div className='ml-4'>
-                    <h3 className="text-2xl font-bold mb-2 text-foreground">
-                    Growth-Oriented Strategies
-                  </h3>
-                  <p className="text-muted-foreground mb-2">
-                    Every solution we create is focused on your business growth and customer engagement.
-                  </p>
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground">
+                      Growth-Oriented Strategies
+                    </h3>
+                    <p className="text-muted-foreground mb-2 text-sm md:text-base">
+                      Every solution we create is focused on your business growth and customer engagement.
+                    </p>
                   </div>
                 </div>
-                <div className='flex'>
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center flex-shrink-0 shadow-lg">
-                    <StarIcon className="w-8 h-8" />
+                <div className='flex items-start'>
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center flex-shrink-0 shadow-lg mt-1">
+                    <StarIcon className="w-6 h-6 md:w-8 md:h-8" />
                   </div>
                   <div className='ml-4'>
-                    <h3 className="text-2xl font-bold mb-2 text-foreground">
-                    Trusted Partnership
-                  </h3>
-                  <p className="text-muted-foreground mb-2">
-                    We work closely with you to understand your goals and bring your vision to life with precision and passion.
-                  </p>
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground">
+                      Trusted Partnership
+                    </h3>
+                    <p className="text-muted-foreground mb-2 text-sm md:text-base">
+                      We work closely with you to understand your goals and bring your vision to life with precision and passion.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -358,15 +354,20 @@ export const About = () => {
             </div>
 
             {/* Right side - Image with circular text */}
-            <div className="relative">
+            <div className="relative mt-8 lg:mt-0">
               {/* Circular text overlay */}
-              <div className="absolute -top-8 -right-8 w-48 h-48 z-10">
-                <svg viewBox="0 0 200 200" className="animate-spin-slow">
+              <div className="absolute -top-6 -right-2 md:-top-8 md:-right-8 w-32 h-32 md:w-48 md:h-48 z-10">
+                <svg viewBox="0 0 200 200" className="animate-spin-slow w-full h-full">
                   <path
                     id="circlePath"
                     d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
                     fill="none"
                   />
+                  <text fill="#e77504" fontWeight="bold">
+                    <textPath href="#circlePath" startOffset="0%">
+                      YEARS OF EXCELLENCE • YEARS OF EXCELLENCE •
+                    </textPath>
+                  </text>
                 </svg>
               </div>
 
@@ -379,69 +380,67 @@ export const About = () => {
           </div>
         </div>
       </section>
-      <section className="py-20 px-6 bg-background">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-background">
         <p className="text-[#e77504] text-sm text-center font-semibold tracking-wider uppercase mb-4">
           // OUR TEAM
         </p>
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">
           Experienced coaches{" "}
           <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
             dedicated to you
           </span>
         </h2>
         <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member) => (
-              <div
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {team.map((member, index) => (
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                viewport={{ once: true }}
                 key={member.id}
                 className="relative group cursor-pointer"
-                onMouseEnter={() => setHoveredCard(member.id)}
-                onMouseLeave={() => setHoveredCard(null)}
               >
                 <div className="relative overflow-hidden rounded-3xl">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  
+
                   {/* Overlay on hover */}
-                  {hoveredCard === member.id && (
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#e77504] via-[#f0a510]/50 to-transparent flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="w-24 h-24 rounded-full bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center mb-6 mx-auto">
-                          <p className="text-primary-foreground font-bold text-lg">View</p>
-                        </div>
-                        <div className="flex items-center justify-center gap-4">
-                          <button className="w-12 h-12 rounded-full bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center hover:bg-black transition-all duration-300">
-                            <img src={assets.linkedin_icon} alt="linkedin icon" className='hover:invert' />
-                          </button>
-                          <button className="w-12 h-12 rounded-full bg-primary-foreground/20 from-[#e77504] to-[#f0a510] backdrop-blur-sm flex items-center justify-center hover:bg-black transition-all duration-300">
-                            <img src={assets.instagram_icon} alt="instagram icon" className='hover:invert' />
-                          </button>
-                          <button className="w-12 h-12 rounded-full bg-primary-foreground/20 from-[#e77504] to-[#f0a510] backdrop-blur-sm flex items-center justify-center hover:bg-primary-foreground/30 transition-colors">
-                            <img src={assets.twitter_icon} className='bg-primary-foreground' alt="twitter icon" />
-                          </button>
-                          <button className="w-12 h-12 rounded-full bg-primary-foreground/20 from-[#e77504] to-[#f0a510] backdrop-blur-sm flex items-center justify-center hover:bg-primary-foreground/30 transition-colors">
-                            <img src={assets.facebook_icon} className='bg-primary-foreground' alt="facebook icon" />
-                          </button>
-                        </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#e77504]/90 via-[#f0a510]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-[2px]">
+                    <div className="text-center transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500">
+                      <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-6 mx-auto border border-white/30">
+                        <p className="text-white font-bold text-lg tracking-wider">View</p>
+                      </div>
+                      <div className="flex items-center justify-center gap-3">
+                        {[assets.linkedin_icon, assets.instagram_icon, assets.twitter_icon, assets.facebook_icon].map((icon, i) => (
+                          <motion.button
+                            key={i}
+                            whileHover={{ scale: 1.1, rotate: 5 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center hover:bg-white transition-all duration-300 group/btn"
+                          >
+                            <img src={icon} alt="social icon" className="w-5 h-5 group-hover/btn:invert transition-all duration-300" />
+                          </motion.button>
+                        ))}
                       </div>
                     </div>
-                  )}
+                  </div>
                 </div>
-                
+
                 <div className="mt-6 text-center">
-                  <h3 className="text-xl font-bold text-foreground">{member.name}</h3>
+                  <h3 className="text-xl font-bold text-foreground group-hover:text-[#e77504] transition-colors duration-300">{member.name}</h3>
                   <p className="text-muted-foreground">{member.role}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
     </>
-    
+
   );
 };
 
