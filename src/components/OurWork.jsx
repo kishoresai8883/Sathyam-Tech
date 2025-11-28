@@ -1,6 +1,7 @@
 import React from 'react'
 import assets from '../assets/assets'
-import Project1 from '../assets/bluewave_project_img.png'
+import Project1 from '../assets/bluewave_project_img.webp'
+import Project2 from '../assets/biomart_project_img.webp'
 import Title from './Title'
 import { motion } from 'motion/react'
 
@@ -8,13 +9,13 @@ const OurWork = () => {
     const workData = [
         {
             title: 'Bluewave Company',
-            description: 'A Website is designed and developed for Bluewave Company, a leading provider of Manpower & Mapping Services in india.',
+            description: 'A Website is designed and developed to Bluewave Company, a leading provider of Manpower & Mapping Services in india.',
             image: Project1
         },
         {
-            title: 'Fitness app promotion',
-            description: 'We help you create a marketing strategy that drives results.',
-            image: assets.work_fitness_app
+            title: 'Biomart Company',
+            description: 'A Website is designed and developed to Biomart Company, a sustainable eco-friendly solutions.',
+            image: Project2
         },
         {
             title: 'Dashboard Management',

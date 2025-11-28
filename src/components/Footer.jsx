@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import assets from '../assets/assets'
 import { motion } from 'motion/react'
-import Logo from '../assets/STS-logo-bg-white.png'
-import LogoBlk from '../assets/STS-logo-bg-black.png'
+import Logo from '../assets/STS-logo-bg-white.webp'
+import LogoBlk from '../assets/STS-logo-bg-black.webp'
 
 const Footer = ({ theme }) => {
 
