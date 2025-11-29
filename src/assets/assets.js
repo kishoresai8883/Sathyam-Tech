@@ -3,7 +3,7 @@ import arrow_icon from './arrow_icon.svg'
 import group_profile from './group_profile.png'
 import bgImage1 from './bgImage1.webp'
 import bgImage2 from './bgImage2.webp'
-import hero_img from './hero_img.png'
+import hero_img from './hero_img.webp'
 import microsoft_logo from './microsoft_logo.png'
 import zoom_logo from './zoom_logo.png'
 import rakuten_logo from './rakuten_logo.png'
@@ -14,7 +14,7 @@ import marketing_icon from './marketing_icon.svg'
 import social_icon from './social_icon.svg'
 import menu_icon from './menu_icon.svg'
 import close_icon from './close_icon.svg'
-import work_mobile_app from './work_mobile_app.webp'
+import furniture_app from './work_mobile_app.webp'
 import work_fitness_app from './work_fitness_app.png'
 import work_dashboard_management from './work_dashboard_management.png'
 import email_icon from './email_icon.svg'
@@ -53,7 +53,7 @@ const assets = {
   social_icon,
   menu_icon,
   close_icon,
-  work_mobile_app,
+  furniture_app,
   work_fitness_app,
   work_dashboard_management,
   email_icon,

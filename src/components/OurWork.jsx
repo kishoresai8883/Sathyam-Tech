@@ -18,9 +18,9 @@ const OurWork = () => {
             image: Project2
         },
         {
-            title: 'Dashboard Management',
-            description: 'An advanced dashboard that provides real-time insights and analytics for better decision-making.',
-            image: assets.work_dashboard_management
+            title: 'Furniture application',
+            description: 'A mobile application is designed and developed for furniture shopping with user-friendly interface and seamless navigation.',
+            image: assets.furniture_app
         }
     ]
   return (

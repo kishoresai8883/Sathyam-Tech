@@ -2,8 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import assets from '../assets/assets'
 import { motion } from 'motion/react'
-import Logo from '../assets/STS-logo-bg-white.webp'
-import LogoBlk from '../assets/STS-logo-bg-black.webp'
+import Logo from '../assets/Logo.webp'
 
 const Footer = ({ theme }) => {
 
@@ -24,7 +23,7 @@ const Footer = ({ theme }) => {
           className='space-y-5 text-sm text-gray-700 dark:text-gray-400'>
           <Link to="/">
             <img
-              src={theme === 'dark' ? LogoBlk : Logo}
+              src={theme === 'dark' ? Logo : Logo}
               alt="logo"
               className="w-32 sm:w-40"
             />

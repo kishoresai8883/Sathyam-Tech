@@ -24,8 +24,8 @@ const Contact = () => {
             const data = await res.json()
 
             if (data.success) {
-                toast.success('Thank you for your Submission. We will get back to you soon...')
                 toast.dismiss()
+                toast.success('Thank you for your Submission. We will get back to you soon...')
                 e.target.reset()
             } else {
                 toast.dismiss()

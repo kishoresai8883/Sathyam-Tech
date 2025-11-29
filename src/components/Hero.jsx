@@ -5,7 +5,7 @@ import { motion } from 'motion/react'
 
 const Hero = () => {
   return (
-    <div id="hero" className='flex flex-col items-center gap-6 py-20 px-4 sm:px-12
+    <div id="hero" className='flex flex-col items-center gap-6 py-24 px-4 sm:px-12
     lg:px-24 xl:px-40 text-center w-full overflow-hidden text-gray-700 dark:text-white'>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{duration: 0.6, delay: 2}}
+        transition={{duration: 0.6, delay: 1.2}}
         viewport={{ once: true }} 
         className='relative'>
         <img src={heroImg} alt="hero img" className='w-full max-w-6xl rounded-3xl' />
