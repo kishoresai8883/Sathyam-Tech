@@ -32,7 +32,7 @@ const App = () => {
   )
 
   return (
-    <HashRouter>
+    <Router>
       <div className='dark:bg-black relative overflow-x-hidden'>
         <Toaster />
         <Navbar theme={theme} setTheme={setTheme} />
@@ -46,7 +46,7 @@ const App = () => {
         </Routes>
         <Footer theme={theme} />
       </div>
-    </HashRouter>
+    </Router>
   )
 }
 
