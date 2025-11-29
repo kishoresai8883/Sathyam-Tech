@@ -92,7 +92,7 @@ export const About = () => {
   return (
     <>
       <section
-        className="relative h-[300px] md:h-[400px] w-full bg-cover bg-center flex items-center"
+        className="relative h-[300px] md:h-[400px] w-full bg-cover bg-center mt-16 flex items-center"
         style={{ backgroundImage: `url(${hero})` }}
       >
         {/* Dark overlay */}
