@@ -1,5 +1,6 @@
-import React from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import toast from 'react-hot-toast'
 import hero from '../assets/about_hero.webp'
 import { motion } from 'motion/react'
 import EmailIcon from '@mui/icons-material/Email';
@@ -7,6 +8,37 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const Contact = () => {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    toast.loading("Submitting....");
+    const formData = new FormData(event.target);
+    formData.append("access_key", "407c5c5e-7473-492b-af8c-4ce6ad4f2a7c");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        toast.dismiss(); // Dismiss the loading toast
+        toast.success("Thank you for your Submission. We will get back to you soon...");
+        event.target.reset();
+      } else {
+        toast.dismiss(); // Dismiss the loading toast
+        toast.error("Error");
+      }
+    } catch (error) {
+      toast.dismiss(); // Dismiss the loading toast
+      toast.error("Error");
+    }
+
+
+  };
+
   return (
     <>
       <section
@@ -95,26 +127,26 @@ const Contact = () => {
             viewport={{ once: true }}
             className="bg-gray-50 dark:bg-gray-900 p-8 sm:p-10 rounded-3xl shadow-xl"
           >
-            <form className="space-y-6">
+            <form onSubmit={onSubmit} className="space-y-6">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex flex-col gap-2">
                   <label className="text-sm font-medium ml-1">First Name</label>
-                  <input type="text" placeholder="John" className="w-full p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" />
+                  <input type="text" name='firstname' placeholder="John" className="w-full p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" />
                 </div>
                 <div className="flex flex-col gap-2">
                   <label className="text-sm font-medium ml-1">Last Name</label>
-                  <input type="text" placeholder="Doe" className="w-full p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" />
+                  <input type="text" name='lastname' placeholder="Doe" className="w-full p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" />
                 </div>
               </div>
 
               <div className="flex flex-col gap-2">
                 <label className="text-sm font-medium ml-1">Email Address</label>
-                <input type="email" placeholder="john@example.com" className="w-full p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" />
+                <input type="email" name='email' placeholder="john@example.com" className="w-full p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" />
               </div>
 
               <div className="flex flex-col gap-2">
                 <label className="text-sm font-medium ml-1">Message</label>
-                <textarea rows="4" placeholder="Tell us about your project..." className="w-full p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"></textarea>
+                <textarea rows="4" name='message' placeholder="Tell us about your project..." className="w-full p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"></textarea>
               </div>
 
               <button type="submit" className="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-blue-600 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">

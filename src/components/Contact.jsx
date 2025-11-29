@@ -10,7 +10,7 @@ import HomeIcon from '@mui/icons-material/Home';
 const Contact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+        toast.loading('Submitting...')
         const formData = new FormData(e.target)
 
         formData.append('access_key', "3b02c39a-fd39-4e05-b291-bc58569c8b0d")
@@ -25,11 +25,14 @@ const Contact = () => {
 
             if (data.success) {
                 toast.success('Thank you for your Submission. We will get back to you soon...')
+                toast.dismiss()
                 e.target.reset()
             } else {
+                toast.dismiss()
                 toast.error(data.message)
             }
         } catch (error) {
+            toast.dismiss()
             toast.error(error.message)
         }
     }
@@ -41,7 +44,7 @@ const Contact = () => {
             transition={{ staggerChildren: 0.2 }}
             viewport={{ once: true }}
             id='contact-us' className='flex flex-col items-center gap-7 px-4 sm:px-12
-        lg:px-24 xl:px-40 py-28 text-gray-700 dark:text-white'>
+                lg:px-24 xl:px-40 py-28 text-gray-700 dark:text-white'>
             <Title title='Reach out Us' desc='From strategy to execution, we craft digital
       solutions that move your business forward.'/>
             <div className='grid md:grid-cols-2 gap-10 w-full items-center'>
