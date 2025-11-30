@@ -376,6 +376,7 @@ export const About = () => {
           </div>
         </div>
       </section>
+      {/*
       <section className="py-12 md:py-20 px-4 md:px-6 bg-background dark:bg-black">
         <p className="text-[#e77504] text-sm text-center font-semibold tracking-wider uppercase mb-4">
           // OUR TEAM
@@ -404,7 +405,6 @@ export const About = () => {
                     className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-110"
                   />
 
-                  {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#e77504]/90 via-[#f0a510]/60 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-[2px]">
                     <div className="text-center transform translate-y-10 group-hover:translate-y-0 transition-transform duration-500">
                       <div className="w-20 h-20 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center mb-6 mx-auto border border-white/30">
@@ -455,6 +455,7 @@ export const About = () => {
           </div>
         </div>
       </section>
+      */}
     </>
 
   );
