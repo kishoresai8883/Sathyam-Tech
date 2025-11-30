@@ -10,7 +10,7 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{duration: 0.5, delay: 0.7}}
+        transition={{ duration: 0.5, delay: 0.7 }}
         viewport={{ once: true }}
         className='items-center border border-slate-300 p-1.5 px-4 rounded-full'>
         <p className='text-sm font-semiBold'>Revolutionize Workflow</p>
@@ -18,7 +18,7 @@ const Hero = () => {
       <motion.h1
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{duration: 0.6, delay: 0.8}}
+        transition={{ duration: 0.6, delay: 0.8 }}
         viewport={{ once: true }}
         className='text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-medium
           sl:leading-[95px] max-w-5xl'>Engineering the Future of <span className='bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text
@@ -26,18 +26,18 @@ const Hero = () => {
       <motion.p
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{duration: 0.5, delay: 1}}
+        transition={{ duration: 0.5, delay: 1 }}
         viewport={{ once: true }}
         className='text-sm sm:text-lg font-medium text-gray-500 dark:text-white/75
           max-w-4/5 max-w-xl pb-3'>Bringing innovative ideas to life as engaging, interactive Digital experiences that spark authentic connections.</motion.p>
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
-        transition={{duration: 0.6, delay: 1.2}}
-        viewport={{ once: true }} 
+        transition={{ duration: 0.6, delay: 1.2 }}
+        viewport={{ once: true }}
         className='relative'>
-        <img src={heroImg} alt="hero img" className='w-full max-w-6xl rounded-3xl' />
-        <img src={assets.bgImage1} alt="bg img" className='absolute -top-72 -right-60 sm:-top-100 sm:-right-70 -z-10 dark:hidden'/>
+        <img src={heroImg} alt="hero img" width={1000} height={563} className='w-full max-w-6xl rounded-3xl' />
+        <img src={assets.bgImage1} alt="bg img" width={1920} height={1415} fetchPriority="high" className='absolute -top-72 -right-60 sm:-top-100 sm:-right-70 -z-10 dark:hidden' />
       </motion.div>
     </div>
   )
