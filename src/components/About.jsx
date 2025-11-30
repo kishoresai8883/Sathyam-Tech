@@ -40,7 +40,7 @@ const About = () => {
                     <div className='flex justify-center'>
                         <Link to='/about' className='flex w-max gap-2 bg-primary text-white
                         text-sm px-8 py-2 rounded-md cursor-pointer hover:scale-102 transition-all'>
-                            Know More <img src={assets.arrow_icon} alt="about" className='w-4' />
+                            Know More <img src={assets.arrow_icon} alt="about" width={16} height={16} className='w-4' />
                         </Link>
                     </div>
 

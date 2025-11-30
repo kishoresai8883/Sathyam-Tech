@@ -90,7 +90,7 @@ const Contact = () => {
                     <div>
                         <p className='mb-2 text-sm font-medium'>Your Name</p>
                         <div className='flex pl-3 rounded-lg border border-gray-300 dark:border-gray-600'>
-                            <img src={assets.person_icon} alt="person icon" />
+                            <img src={assets.person_icon} alt="person icon" width={20} height={20} />
                             <input type="text" name='name' placeholder='Enter your name' className='w-full
                     p-3 text-sm outline-none bg-transparent' required />
                         </div>
@@ -98,7 +98,7 @@ const Contact = () => {
                     <div>
                         <p className='mb-2 text-sm font-medium'>Email Id</p>
                         <div className='flex pl-3 rounded-lg border border-gray-300 dark:border-gray-600'>
-                            <img src={assets.email_icon} alt="email icon" />
+                            <img src={assets.email_icon} alt="email icon" width={20} height={20} />
                             <input type="email" name='email' placeholder='Enter your email' className='w-full
                     p-3 text-sm outline-none bg-transparent' required />
                         </div>
@@ -110,7 +110,7 @@ const Contact = () => {
                     </div>
                     <button type='submit' className='w-max flex gap-2 bg-primary text-white
             text-sm px-10 py-3 rounded-md cursor-pointer hover:scale-102 transition-all'>
-                        Submit <img src={assets.arrow_icon} alt="submit" className='w-4' />
+                        Submit <img src={assets.arrow_icon} alt="submit" width={16} height={16} className='w-4' />
                     </button>
                 </motion.form>
             </div>

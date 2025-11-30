@@ -52,7 +52,7 @@ const Navbar = ({ theme, setTheme }) => {
           <img src={theme === 'dark' ? assets.menu_icon_dark : assets.menu_icon} alt="theme toggle" onClick={() => setSidebarOpen(true)} className="w-8 sm:hidden" />
           <Link to="/contact" className='text-sm max-sm:hidden flex items-center
             gap-2 bg-primary text-white px-6 py-2 rounded-full cursor-pointer hover:scale-103 trasition-all'>
-            Connect <img src={assets.arrow_icon} width={14} alt='connect button' />
+            Connect <img src={assets.arrow_icon} width={14} height={14} alt='connect button' />
           </Link>
         </div>
       </motion.div>

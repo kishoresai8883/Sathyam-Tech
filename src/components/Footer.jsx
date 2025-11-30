@@ -25,6 +25,8 @@ const Footer = ({ theme }) => {
             <img
               src={theme === 'dark' ? Logo : Logo}
               alt="logo"
+              width={160}
+              height={53}
               className="w-32 sm:w-40"
             />
           </Link>
@@ -66,16 +68,16 @@ const Footer = ({ theme }) => {
         <p>Copyright 2025 © Sathyam Tech Solutions - All Rights Reserved.</p>
         <div className='flex items-center justify-between gap-4'>
           <a href="https://www.linkedin.com/in/kishore-sai" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity duration-300">
-            <img src={assets.linkedin_icon} alt="linkedin icon" className="w-5 h-5" />
+            <img src={assets.linkedin_icon} alt="linkedin icon" width={20} height={20} className="w-5 h-5" />
           </a>
           <a href="https://instagram.com/kishoresai_g" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity duration-300">
-            <img src={assets.instagram_icon} alt="instagram icon" className="w-5 h-5" />
+            <img src={assets.instagram_icon} alt="instagram icon" width={20} height={20} className="w-5 h-5" />
           </a>
           <a href="https://twitter.com/Sai207Sai" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity duration-300">
-            <img src={assets.twitter_icon} alt="twitter icon" className="w-5 h-5" />
+            <img src={assets.twitter_icon} alt="twitter icon" width={20} height={20} className="w-5 h-5" />
           </a>
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity duration-300">
-            <img src={assets.facebook_icon} alt="facebook icon" className="w-5 h-5" />
+            <img src={assets.facebook_icon} alt="facebook icon" width={20} height={20} className="w-5 h-5" />
           </a>
         </div>
       </motion.div>
