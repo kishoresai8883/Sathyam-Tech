@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import assets from '../assets/assets'
 import Title from './Title'
 import ServiceCard from './ServiceCard'
@@ -43,6 +44,12 @@ const Services = () => {
         {servicesData.map((service, index) => (
           <ServiceCard key={index} service={service} index={index} />
         ))}
+      </div>
+      <div className="flex items-center gap-6 mb-4">
+        <Link to="/services" variant="teal" size="lg" className="inline-flex  items-center justify-center px-8 py-3 gap-2 bg-primary text-white hover:bg-primary-dark rounded-md font-semibold shadow-lg hover:shadow-xl cursor-pointer hover:scale-102 transition-all duration-300">
+          View All Services
+          <img src={assets.arrow_icon} className="w-5 h-5" />
+        </Link>
       </div>
     </motion.div>
   )

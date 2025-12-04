@@ -35,10 +35,30 @@ const Footer = ({ theme }) => {
           </p>
 
           <ul className='flex gap-8'>
-            <li><Link to="/" className='hover:text-primary'>Home</Link></li>
-            <li><Link to="/about" className='hover:text-primary'>About</Link></li>
-            <li><Link to="/services" className='hover:text-primary'>Services</Link></li>
-            <li><Link to="/contact" className='hover:text-primary'>Contact</Link></li>
+            <li>
+              <Link to="/" className='relative transition-all duration-300 hover:text-orange-500 dark:hover:text-orange-400 group inline-block'>
+                Home
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 ease-out"></span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className='relative transition-all duration-300 hover:text-orange-500 dark:hover:text-orange-400 group inline-block'>
+                About
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 ease-out"></span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/services" className='relative transition-all duration-300 hover:text-orange-500 dark:hover:text-orange-400 group inline-block'>
+                Services
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 ease-out"></span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className='relative transition-all duration-300 hover:text-orange-500 dark:hover:text-orange-400 group inline-block'>
+                Contact
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 ease-out"></span>
+              </Link>
+            </li>
           </ul>
         </motion.div>
         <motion.div
@@ -67,17 +87,17 @@ const Footer = ({ theme }) => {
       text-gray-500 flex-wrap'>
         <p>Copyright 2025 © Sathyam Tech Solutions - All Rights Reserved.</p>
         <div className='flex items-center justify-between gap-4'>
-          <a href="https://www.linkedin.com/in/kishore-sai" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity duration-300">
-            <img src={assets.linkedin_icon} alt="linkedin icon" width={20} height={20} className="w-5 h-5" />
+          <a href="https://www.linkedin.com/in/kishore-sai" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110 group">
+            <img src={assets.linkedin_icon} alt="linkedin icon" width={20} height={20} className="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:saturate-100 group-hover:invert-[.45] group-hover:sepia-[1] group-hover:saturate-[5] group-hover:hue-rotate-[340deg]" />
           </a>
-          <a href="https://instagram.com/kishoresai_g" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity duration-300">
-            <img src={assets.instagram_icon} alt="instagram icon" width={20} height={20} className="w-5 h-5" />
+          <a href="https://instagram.com/kishoresai_g" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110 group">
+            <img src={assets.instagram_icon} alt="instagram icon" width={20} height={20} className="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:saturate-100 group-hover:invert-[.45] group-hover:sepia-[1] group-hover:saturate-[5] group-hover:hue-rotate-[340deg]" />
           </a>
-          <a href="https://twitter.com/Sai207Sai" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity duration-300">
-            <img src={assets.twitter_icon} alt="twitter icon" width={20} height={20} className="w-5 h-5" />
+          <a href="https://twitter.com/Sai207Sai" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110 group">
+            <img src={assets.twitter_icon} alt="twitter icon" width={20} height={20} className="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:saturate-100 group-hover:invert-[.45] group-hover:sepia-[1] group-hover:saturate-[5] group-hover:hue-rotate-[340deg]" />
           </a>
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity duration-300">
-            <img src={assets.facebook_icon} alt="facebook icon" width={20} height={20} className="w-5 h-5" />
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110 group">
+            <img src={assets.facebook_icon} alt="facebook icon" width={20} height={20} className="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:saturate-100 group-hover:invert-[.45] group-hover:sepia-[1] group-hover:saturate-[5] group-hover:hue-rotate-[340deg]" />
           </a>
         </div>
       </motion.div>

@@ -42,10 +42,22 @@ const Navbar = ({ theme, setTheme }) => {
           right-0 max-sm:min-h-screen max-sm:h-full ${theme === 'dark' ? 'max-sm:bg-gray-900 max-sm:text-white' : 'max-sm:bg-white max-sm:text-gray-700'} max-sm:pt-20
           flex flex-col sm:flex-row sm:items-center gap-5 transition-all`}>
           <img src={assets.close_icon} alt="close" className={`w-5 absolute right-4 top-4 sm:hidden ${theme === 'dark' ? '' : 'invert'}`} onClick={() => setSidebarOpen(false)} />
-          <Link to='/' onClick={() => setSidebarOpen(false)} className='sm:hover:border-b sm:hover:border-b-orange-400'>Home</Link>
-          <Link to='/about' onClick={() => setSidebarOpen(false)} className='sm:hover:border-b sm:hover:border-b-orange-400'>About</Link>
-          <Link to='/services' onClick={() => setSidebarOpen(false)} className='sm:hover:border-b sm:hover:border-b-orange-400'>Services</Link>
-          <Link to='/contact' onClick={() => setSidebarOpen(false)} className='sm:hover:border-b sm:hover:border-b-orange-400'>Contact Us</Link>
+          <Link to='/' onClick={() => setSidebarOpen(false)} className='nav-link relative transition-all duration-300 sm:hover:text-orange-500 dark:sm:hover:text-orange-400 group'>
+            Home
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 ease-out"></span>
+          </Link>
+          <Link to='/about' onClick={() => setSidebarOpen(false)} className='nav-link relative transition-all duration-300 sm:hover:text-orange-500 dark:sm:hover:text-orange-400 group'>
+            About
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 ease-out"></span>
+          </Link>
+          <Link to='/services' onClick={() => setSidebarOpen(false)} className='nav-link relative transition-all duration-300 sm:hover:text-orange-500 dark:sm:hover:text-orange-400 group'>
+            Services
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 ease-out"></span>
+          </Link>
+          <Link to='/contact' onClick={() => setSidebarOpen(false)} className='nav-link relative transition-all duration-300 sm:hover:text-orange-500 dark:sm:hover:text-orange-400 group'>
+            Contact Us
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 ease-out"></span>
+          </Link>
         </div>
         <div className='flex items-center gap-2 sm:gap-4'>
           <ThemeToggleBtn theme={theme} setTheme={setTheme} />
