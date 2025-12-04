@@ -9,17 +9,28 @@ import aboutImg2 from '../assets/about3.webp'
 import hero from '../assets/about_hero.webp'
 import WhyChoose from '../assets/why_choose.webp'
 import Approach from '../assets/approach.webp'
-import StarIcon from '@mui/icons-material/Star';
+import TargetIcon from '@mui/icons-material/GpsFixed';
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import DrawIcon from '@mui/icons-material/Draw';
+import CodeIcon from '@mui/icons-material/Code';
+import RocketLaunchIcon from '@mui/icons-material/RocketLaunch';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import TrackChangesIcon from '@mui/icons-material/TrackChanges';
+import PsychologyIcon from '@mui/icons-material/Psychology';
+import SpeedIcon from '@mui/icons-material/Speed';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import HandshakeIcon from '@mui/icons-material/Handshake';
 import ProgressBar from '../components/Progressbar'
 
 const approaches = [
   {
-    icon: StarIcon,
+    icon: TargetIcon,
     title: "Our Mission",
-    description: "To empower businesses of all sizes with modern, scalable, and efficient digital solutions that simplify operations, attract customers, and drive measurable growth. We aim to make technology accessible, impactful, and tailored to every client’s unique vision."
+    description: "To empower businesses of all sizes with modern, scalable, and efficient digital solutions that simplify operations, attract customers, and drive measurable growth. We aim to make technology accessible, impactful, and tailored to every client's unique vision."
   },
   {
-    icon: StarIcon,
+    icon: VisibilityIcon,
     title: "Our Vision",
     description: "To be recognized as a trusted digital partner that transforms the way businesses connect with their audiences online — through creativity, technology, and innovation. We aspire to build long-term relationships by delivering exceptional results and continuous support.",
   },
@@ -30,25 +41,25 @@ const steps = [
     number: "1",
     title: "Ideation",
     description: "We work with you from project planning, conducting research and uncovering user pain points all the way to producing a product concept that sacrifies market needs.",
-    icon: StarIcon,
+    icon: LightbulbIcon,
   },
   {
     number: "2",
     title: "Wireframing",
     description: "It maps out the user journey and visualizes your end product. It's a vital preparatory blueprint that will define your website's structure, content and functionality.",
-    icon: StarIcon,
+    icon: DrawIcon,
   },
   {
     number: "3",
     title: "Development",
     description: "Access your dashboard for a summary of your finances: balances, recent transactions, and insights.",
-    icon: StarIcon,
+    icon: CodeIcon,
   },
   {
     number: "4",
     title: "Deploy & Maintain",
     description: "Discover a variety of investment opportunities tailored to your financial goals.",
-    icon: StarIcon,
+    icon: RocketLaunchIcon,
   },
 ];
 
@@ -126,11 +137,11 @@ export const About = () => {
                 <div className="absolute -top-4 -left-2 md:-top-6 md:-left-6 z-20 bg-gradient-to-br from-[#e77504] to-[#f0a510] rounded-3xl p-4 md:p-6 shadow-xl scale-90 md:scale-100 origin-top-left">
                   <div className="flex items-center gap-2 mb-2">
                     <div className="w-8 h-8 rounded-full border-2 border-primary-foreground/50 flex items-center justify-center">
-                      <StarIcon className="w-4 h-4" />
+                      <EmojiEventsIcon className="w-4 h-4" />
                     </div>
                   </div>
-                  <p className="text-lg md:text-xl font-bold">2+ years of</p>
-                  <p className="text-lg md:text-xl font-bold">experience</p>
+                  <p className="text-lg md:text-xl font-bold">12+ projects</p>
+                  <p className="text-lg md:text-xl font-bold">completed</p>
                 </div>
 
                 {/* Main image */}
@@ -168,14 +179,14 @@ export const About = () => {
               <p className="text-muted-foreground dark:text-gray-300 text-base md:text-lg mb-8 leading-relaxed">
                 At <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
                   Sathyam Tech Solutions,
-                </span> we transform ideas into powerful digital experiences. We’re a modern web development agency that helps local businesses, startups, and eCommerce brands grow through innovative web and mobile solutions.
+                </span> we transform ideas into powerful digital experiences. We're a modern web development agency that helps local businesses, startups, and eCommerce brands grow through innovative web and mobile solutions.
                 With a perfect blend of design, technology, and strategy, our team delivers user-friendly websites, high-performing web apps, and result-driven SEO campaigns that elevate your online presence and help you stand out in the digital crowd.
               </p>
 
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center">
-                    <StarIcon className="w-4 h-4 text-accent dark:text-white" />
+                    <TrackChangesIcon className="w-4 h-4 text-accent dark:text-white" />
                   </div>
                   <p className="text-foreground dark:text-white font-semibold text-base md:text-lg">
                     Goal Setting And Accountability
@@ -183,7 +194,7 @@ export const About = () => {
                 </div>
                 <div className="flex items-center gap-3">
                   <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center">
-                    <StarIcon className="w-4 h-4 text-accent dark:text-white" />
+                    <PsychologyIcon className="w-4 h-4 text-accent dark:text-white" />
                   </div>
                   <p className="text-foreground dark:text-white font-semibold text-base md:text-lg">
                     Mindset And Confidence Building
@@ -268,8 +279,17 @@ export const About = () => {
           </div>
 
           <div className="relative">
-            {/* Dashed line connecting circles */}
-            <div className="hidden md:block absolute top-10 left-0 right-0 h-0.5 border-t-2 border-dashed border-[#f0a510] z-0"></div>
+            {/* Curved wave line connecting circles */}
+            <svg className="hidden lg:block absolute top-8 md:top-0 left-0 right-0 w-full h-20 z-0 pointer-events-none" viewBox="0 0 100 20" preserveAspectRatio="none">
+              <path
+                d="M 12.5 10 Q 25 2, 37.5 10 Q 50 18, 62.5 10 Q 75 2, 87.5 10"
+                fill="none"
+                stroke="#f0a510"
+                strokeWidth="0.5"
+                strokeDasharray="2 2"
+                opacity="0.6"
+              />
+            </svg>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
               {steps.map((step, index) => (
@@ -306,7 +326,7 @@ export const About = () => {
               <div className="mb-8 space-y-6">
                 <div className='flex items-start'>
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center flex-shrink-0 shadow-lg mt-1">
-                    <StarIcon className="w-6 h-6 md:w-8 md:h-8" />
+                    <SpeedIcon className="w-6 h-6 md:w-8 md:h-8" />
                   </div>
                   <div className='ml-4'>
                     <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground dark:text-white">
@@ -319,7 +339,7 @@ export const About = () => {
                 </div>
                 <div className='flex items-start'>
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center flex-shrink-0 shadow-lg mt-1">
-                    <StarIcon className="w-6 h-6 md:w-8 md:h-8" />
+                    <TrendingUpIcon className="w-6 h-6 md:w-8 md:h-8" />
                   </div>
                   <div className='ml-4'>
                     <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground dark:text-white">
@@ -332,7 +352,7 @@ export const About = () => {
                 </div>
                 <div className='flex items-start'>
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#e77504] to-[#f0a510] text-primary-foreground flex items-center justify-center flex-shrink-0 shadow-lg mt-1">
-                    <StarIcon className="w-6 h-6 md:w-8 md:h-8" />
+                    <HandshakeIcon className="w-6 h-6 md:w-8 md:h-8" />
                   </div>
                   <div className='ml-4'>
                     <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground dark:text-white">

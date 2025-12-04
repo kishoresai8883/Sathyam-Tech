@@ -88,8 +88,8 @@ const Contact = () => {
 
             <div className="space-y-8">
               <div className="flex items-start gap-5 group">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <EmailIcon className="text-primary group-hover:text-white transition-colors" />
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                  <EmailIcon className="text-orange-500 group-hover:text-white transition-colors" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Email Us</h3>
@@ -98,8 +98,8 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-5 group">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <PhoneIcon className="text-primary group-hover:text-white transition-colors" />
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                  <PhoneIcon className="text-orange-500 group-hover:text-white transition-colors" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Call Us</h3>
@@ -108,8 +108,8 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-5 group">
-                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <LocationOnIcon className="text-primary group-hover:text-white transition-colors" />
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                  <LocationOnIcon className="text-orange-500 group-hover:text-white transition-colors" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Visit Us</h3>

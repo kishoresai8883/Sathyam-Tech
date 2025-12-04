@@ -2,38 +2,41 @@ import { Link } from 'react-router-dom';
 import Title from './Title'
 import assets from '../assets/assets'
 import aboutImg from '../assets/about.webp'
-import StarIcon from '@mui/icons-material/Star';
-//Our dedicated team are committed to your success, delivering tailored, scalable solutions that drive growth and efficiency. Your success is our focus.
+import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import CodeIcon from '@mui/icons-material/Code';
+import CloudIcon from '@mui/icons-material/Cloud';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 
 const About = () => {
     return (
         <div className='flex flex-col items-center gap-7 px-4
       sm:px-12 lg:px-24 xl:px-40 pt-28 text-gray-700 dark:text-white'>
-            <Title title="About Us" desc='We’re a team of passionate web developers and designers dedicated to crafting user-friendly, high-performance websites that help businesses grow' />
+            <Title title="About Us" desc='We are a team of passionate web developers and designers dedicated to crafting user-friendly, high-performance websites that help businesses grow' />
             <div className='grid md:grid-cols-2 gap-16'>
                 <img src={aboutImg} alt="about img" width={626} height={430} className='border border-gray-100 shadow-xl shadow-gray-100 rounded-tr-[64px] rounded-bl-[64px]' />
                 <div className='text-center'>
                     <h1 className='mt-3 mb-2 text-xl font-semibold'>Our dedicated Team committed to your success</h1>
                     <p className='text-sm opacity-60 mb-6'>A passionate team bringing friendly web solutions to businesses—turning your ideas into vibrant online experiences.</p>
                     <ul className='list-disc pl-6 mb-4 text-sm opacity-75 space-y-2'>
-                        <li className='flex gap-2'>
-                            <StarIcon />
+                        <li className='flex gap-3 items-center'>
+                            <LightbulbIcon className='text-gray-700' fontSize='small' />
                             Expert IT consulting and strategic planning
                         </li>
-                        <li className='flex gap-2'>
-                            <StarIcon />
+                        <li className='flex gap-3 items-center'>
+                            <CodeIcon className='text-gray-700' fontSize='small' />
                             Custom software development solutions
                         </li>
-                        <li className='flex gap-2'>
-                            <StarIcon />
+                        <li className='flex gap-3 items-center'>
+                            <CloudIcon className='text-gray-700' fontSize='small' />
                             Cloud computing and infrastructure management
                         </li>
-                        <li className='flex gap-2'>
-                            <StarIcon />
+                        <li className='flex gap-3 items-center'>
+                            <SupportAgentIcon className='text-gray-700' fontSize='small' />
                             24/7 technical support and maintenance
                         </li>
-                        <li className='flex gap-2'>
-                            <StarIcon />
+                        <li className='flex gap-3 items-center'>
+                            <AutoAwesomeIcon className='text-gray-700' fontSize='small' />
                             Digital transformation services
                         </li>
                     </ul>
