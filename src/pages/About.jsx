@@ -22,6 +22,7 @@ import SpeedIcon from '@mui/icons-material/Speed';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import ProgressBar from '../components/Progressbar'
+import CTA from '../components/CTA'
 
 const approaches = [
   {
@@ -396,6 +397,7 @@ export const About = () => {
           </div>
         </div>
       </section>
+      <CTA />
       {/*
       <section className="py-12 md:py-20 px-4 md:px-6 bg-background dark:bg-black">
         <p className="text-[#e77504] text-sm text-center font-semibold tracking-wider uppercase mb-4">

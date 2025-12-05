@@ -78,7 +78,10 @@ const Contact = () => {
             className="flex flex-col gap-8"
           >
             <div>
-              <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
+              <div className='relative w-fit group mb-2 p-1'>
+                <h1 className='text-3xl font-bold'>Get In Touch</h1>
+                <span className='absolute bottom-0 left-1/2 w-0 h-0.5 bg-orange-400 group-hover:w-full group-hover:left-0 transition-all duration-300'></span>
+              </div>
               <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
                 Have a project in mind or want to learn more about our services?
                 We’d love to hear from you. Our team is ready to assist you with
@@ -155,6 +158,71 @@ const Contact = () => {
             </form>
           </motion.div>
         </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="py-16 px-4 sm:px-12 lg:px-24 xl:px-40 bg-gray-50 dark:bg-gray-900">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="max-w-7xl mx-auto"
+        >
+          <div className="text-center mb-12">
+            <div className='relative w-fit group mx-auto mb-4'>
+              <h2 className='text-3xl md:text-4xl font-bold text-gray-700 dark:text-white'>Find Us Here</h2>
+              <span className='absolute bottom-0 left-1/2 w-0 h-0.5 bg-orange-400 group-hover:w-full group-hover:left-0 transition-all duration-300'></span>
+            </div>
+            <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+              Visit our office in Hyderabad. We're conveniently located and ready to meet with you.
+            </p>
+          </div>
+
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[400px] md:h-[500px] border-4 border-white dark:border-gray-800">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160484866!2d78.24323149999999!3d17.412608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1733421347000!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Office Location Map"
+              className="grayscale-[30%] hover:grayscale-0 transition-all duration-500"
+            ></iframe>
+
+            {/* Floating Address Card */}
+            <div className="absolute top-6 left-6 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-xl max-w-xs backdrop-blur-sm bg-opacity-95 dark:bg-opacity-95">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center shrink-0">
+                  <LocationOnIcon className="text-white" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg mb-1 text-gray-700 dark:text-white">Our Office</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    2nd Floor, Huda Layout<br />
+                    Hyderabad, Telangana<br />
+                    India
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Quick Direction Button */}
+          <div className="text-center mt-8">
+            <a
+              href="https://www.google.com/maps/dir//Hyderabad,+Telangana/@17.412608,78.24323149999999,12z"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-primary text-white font-semibold px-8 py-4 rounded-xl hover:bg-blue-600 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            >
+              <LocationOnIcon />
+              Get Directions
+            </a>
+          </div>
+        </motion.div>
       </section>
     </>
   )

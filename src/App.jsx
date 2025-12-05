@@ -17,6 +17,12 @@ import ServicesPage from './pages/Services.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import Loader from './components/Loader.jsx'
 import { AnimatePresence } from 'motion/react'
+import ReactGA from "react-ga4";
+import Analytics from './components/Analytics.jsx';
+
+ReactGA.initialize("G-6ZJ6JECC2Z");
+ReactGA.send("pageview");
+
 
 const App = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') ?
@@ -51,6 +57,7 @@ const App = () => {
 
       {!loading && (
         <Router>
+          <Analytics />
           <div className='dark:bg-black relative overflow-x-hidden'>
             <Toaster />
             <Navbar theme={theme} setTheme={setTheme} />

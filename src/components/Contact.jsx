@@ -3,9 +3,9 @@ import assets from '../assets/assets'
 import Title from './Title'
 import toast from 'react-hot-toast'
 import { motion } from 'motion/react'
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
-import HomeIcon from '@mui/icons-material/Home';
+import PhoneIcon from '@mui/icons-material/Phone';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const Contact = () => {
     const handleSubmit = async (e) => {
@@ -55,29 +55,37 @@ const Contact = () => {
                     viewport={{ once: true }}
                     className='flex flex-col w-full'>
                     <div className='relative w-fit group mb-2 p-1'>
-                        <h1 className='text-xl font-semibold'>Get In Touch</h1>
+                        <h1 className='text-3xl font-bold'>Get In Touch</h1>
                         <span className='absolute bottom-0 left-1/2 w-0 h-0.5 bg-orange-400 group-hover:w-full group-hover:left-0 transition-all duration-300'></span>
                     </div>
-                    <p className='text-sm text-gray-500 max-w-lg'>We would love to hear from you. Please fill out this form and we will get in touch with you shortly.</p>
-                    <div className='flex gap-3 mt-6'>
-                        <EmailIcon className='text-orange-500' />
-                        <div className='flex flex-col -mt-2'>
-                            <h3 className='font-semiBold text-md'>Mail</h3>
-                            <h3 className='font-semiBold text-md'>sathyamtechsolutions@gmail.com</h3>
+                    <p className='text-sm text-gray-500 max-w-lg mb-4'>We would love to hear from you. Please fill out this form and we will get in touch with you shortly.</p>
+                    <div className="space-y-8">
+                        <div className="flex items-start gap-5 group">
+                            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                                <EmailIcon className="text-orange-500 group-hover:text-white transition-colors" />
+                            </div>
+                            <div>
+                                <h3 className="font-semibold text-lg mb-1">Email Us</h3>
+                                <p className="text-gray-500 dark:text-gray-400">sathyamtechsolutions@gmail.com</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className='flex gap-3 mt-6'>
-                        <LocalPhoneIcon className='text-orange-500' />
-                        <div className='flex flex-col -mt-2'>
-                            <h3 className='font-semiBold text-md'>Phone</h3>
-                            <h3 className='font-semiBold text-md'>+91 9502908883</h3>
+                        <div className="flex items-start gap-5 group">
+                            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                                <PhoneIcon className="text-orange-500 group-hover:text-white transition-colors" />
+                            </div>
+                            <div>
+                                <h3 className="font-semibold text-lg mb-1">Call Us</h3>
+                                <p className="text-gray-500 dark:text-gray-400">+91 9502908883</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className='flex gap-3 mt-6'>
-                        <HomeIcon className='text-orange-500' />
-                        <div className='flex flex-col -mt-2'>
-                            <h3 className='font-semiBold text-md'>Address</h3>
-                            <h3 className='font-semiBold text-md'>2nd Floor, Huda Layout,<br /> Hyderabad - India</h3>
+                        <div className="flex items-start gap-5 group">
+                            <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                                <LocationOnIcon className="text-orange-500 group-hover:text-white transition-colors" />
+                            </div>
+                            <div>
+                                <h3 className="font-semibold text-lg mb-1">Visit Us</h3>
+                                <p className="text-gray-500 dark:text-gray-400">2nd Floor, Huda Layout,<br /> Hyderabad, India</p>
+                            </div>
                         </div>
                     </div>
                 </motion.div>

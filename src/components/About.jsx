@@ -15,32 +15,32 @@ const About = () => {
             <Title title="About Us" desc='We are a team of passionate web developers and designers dedicated to crafting user-friendly, high-performance websites that help businesses grow' />
             <div className='grid md:grid-cols-2 gap-16'>
                 <img src={aboutImg} alt="about img" width={626} height={430} className='border border-gray-100 shadow-xl shadow-gray-100 rounded-tr-[64px] rounded-bl-[64px]' />
-                <div className='text-center'>
+                <div className='flex flex-col'>
                     <h1 className='mt-3 mb-2 text-xl font-semibold'>Our dedicated Team committed to your success</h1>
                     <p className='text-sm opacity-60 mb-6'>A passionate team bringing friendly web solutions to businesses—turning your ideas into vibrant online experiences.</p>
-                    <ul className='list-disc pl-6 mb-4 text-sm opacity-75 space-y-2'>
-                        <li className='flex gap-3 items-center'>
-                            <LightbulbIcon className='text-gray-700' fontSize='small' />
-                            Expert IT consulting and strategic planning
+                    <ul className='mb-4 text-sm opacity-75 space-y-3'>
+                        <li className='flex gap-3 items-start'>
+                            <LightbulbIcon className='text-gray-700 dark:text-gray-300 mt-0.5 flex-shrink-0' fontSize='small' />
+                            <span>Expert IT consulting and strategic planning</span>
                         </li>
-                        <li className='flex gap-3 items-center'>
-                            <CodeIcon className='text-gray-700' fontSize='small' />
-                            Custom software development solutions
+                        <li className='flex gap-3 items-start'>
+                            <CodeIcon className='text-gray-700 dark:text-gray-300 mt-0.5 flex-shrink-0' fontSize='small' />
+                            <span>Custom software development solutions</span>
                         </li>
-                        <li className='flex gap-3 items-center'>
-                            <CloudIcon className='text-gray-700' fontSize='small' />
-                            Cloud computing and infrastructure management
+                        <li className='flex gap-3 items-start'>
+                            <CloudIcon className='text-gray-700 dark:text-gray-300 mt-0.5 flex-shrink-0' fontSize='small' />
+                            <span>Cloud computing and infrastructure management</span>
                         </li>
-                        <li className='flex gap-3 items-center'>
-                            <SupportAgentIcon className='text-gray-700' fontSize='small' />
-                            24/7 technical support and maintenance
+                        <li className='flex gap-3 items-start'>
+                            <SupportAgentIcon className='text-gray-700 dark:text-gray-300 mt-0.5 flex-shrink-0' fontSize='small' />
+                            <span>24/7 technical support and maintenance</span>
                         </li>
-                        <li className='flex gap-3 items-center'>
-                            <AutoAwesomeIcon className='text-gray-700' fontSize='small' />
-                            Digital transformation services
+                        <li className='flex gap-3 items-start'>
+                            <AutoAwesomeIcon className='text-gray-700 dark:text-gray-300 mt-0.5 flex-shrink-0' fontSize='small' />
+                            <span>Digital transformation services</span>
                         </li>
                     </ul>
-                    <div className='flex justify-center'>
+                    <div className='flex'>
                         <Link to='/about' className='flex w-max gap-2 bg-primary text-white
                         text-sm px-8 py-2 rounded-md cursor-pointer hover:scale-102 transition-all'>
                             Know More <img src={assets.arrow_icon} alt="about" width={16} height={16} className='w-4' />
