@@ -41,25 +41,25 @@ const steps = [
   {
     number: "1",
     title: "Ideation",
-    description: "We work with you from project planning, conducting research and uncovering user pain points all the way to producing a product concept that sacrifies market needs.",
+    description: "We analyze your business needs, identify challenges, and craft a strategic roadmap for the best IT solutions.",
     icon: LightbulbIcon,
   },
   {
     number: "2",
     title: "Wireframing",
-    description: "It maps out the user journey and visualizes your end product. It's a vital preparatory blueprint that will define your website's structure, content and functionality.",
+    description: "It's a vital preparatory blueprint that will define your website's structure, content and functionality.",
     icon: DrawIcon,
   },
   {
     number: "3",
     title: "Development",
-    description: "Access your dashboard for a summary of your finances: balances, recent transactions, and insights.",
+    description: "Our expert team designs, develops, and integrates cutting-edge technology tailored to your goals.",
     icon: CodeIcon,
   },
   {
     number: "4",
     title: "Deploy & Maintain",
-    description: "Discover a variety of investment opportunities tailored to your financial goals.",
+    description: "We ensure seamless performance with continuous improvements, maintenance, and dedicated support.",
     icon: RocketLaunchIcon,
   },
 ];
@@ -190,7 +190,7 @@ export const About = () => {
                     <TrackChangesIcon className="w-4 h-4 text-accent dark:text-white" />
                   </div>
                   <p className="text-foreground dark:text-white font-semibold text-base md:text-lg">
-                    Goal Setting And Accountability
+                    Innovative IT Solutions
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
@@ -198,7 +198,7 @@ export const About = () => {
                     <PsychologyIcon className="w-4 h-4 text-accent dark:text-white" />
                   </div>
                   <p className="text-foreground dark:text-white font-semibold text-base md:text-lg">
-                    Mindset And Confidence Building
+                    End-to-End Solutions
                   </p>
                 </div>
               </div>
@@ -331,10 +331,10 @@ export const About = () => {
                   </div>
                   <div className='ml-4'>
                     <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground dark:text-white">
-                      Modern Development Approach
+                      User-Centric Approach
                     </h3>
                     <p className="text-muted-foreground dark:text-gray-300 mb-2 text-sm md:text-base">
-                      We build responsive, fast, and secure digital products using the latest technologies.
+                      Your satisfaction is our priority, and we tailor solutions to meet your unique needs. Your happiness comes first.
                     </p>
                   </div>
                 </div>
@@ -344,10 +344,10 @@ export const About = () => {
                   </div>
                   <div className='ml-4'>
                     <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground dark:text-white">
-                      Growth-Oriented Strategies
+                      Unmatched Quality
                     </h3>
                     <p className="text-muted-foreground dark:text-gray-300 mb-2 text-sm md:text-base">
-                      Every solution we create is focused on your business growth and customer engagement.
+                      We deliver exceptional products and services that exceed expectations every time.
                     </p>
                   </div>
                 </div>
