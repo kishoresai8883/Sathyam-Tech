@@ -152,9 +152,22 @@ const Contact = () => {
                 <textarea rows="4" name='message' placeholder="Tell us about your project..." className="w-full p-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none"></textarea>
               </div>
 
-              <button type="submit" className="w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-blue-600 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
-                Send Message
-              </button>
+              <div className='flex justify-center sm:justify-start'>
+                <button type="submit" className='relative overflow-hidden group flex items-center gap-3 bg-gradient-to-r from-[#e77504] to-[#f0a510] text-white px-8 py-3 rounded-md font-semibold shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all duration-300 w-max'>
+                  <span className='relative z-10'>Send Message</span>
+                  <motion.svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                    className='w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform flex-shrink-0'
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                  </motion.svg>
+                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-md" />
+                </button>
+              </div>
             </form>
           </motion.div>
         </div>
@@ -191,35 +204,20 @@ const Contact = () => {
               title="Office Location Map"
               className="grayscale-[30%] hover:grayscale-0 transition-all duration-500"
             ></iframe>
-
-            {/* Floating Address Card */}
-            <div className="absolute top-6 left-6 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-xl max-w-xs backdrop-blur-sm bg-opacity-95 dark:bg-opacity-95">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center shrink-0">
-                  <LocationOnIcon className="text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-lg mb-1 text-gray-700 dark:text-white">Our Office</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">
-                    2nd Floor, Huda Layout<br />
-                    Hyderabad, Telangana<br />
-                    India
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
 
-          {/* Quick Direction Button */}
           <div className="text-center mt-8">
             <a
               href="https://www.google.com/maps/dir//Hyderabad,+Telangana/@17.412608,78.24323149999999,12z"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-primary text-white font-semibold px-8 py-4 rounded-xl hover:bg-blue-600 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className="relative overflow-hidden group inline-flex items-center gap-3 bg-gradient-to-r from-[#e77504] to-[#f0a510] text-white px-8 py-3 rounded-md font-semibold shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all duration-300 w-max"
             >
-              <LocationOnIcon />
-              Get Directions
+              <span className='relative z-10'>Get Directions</span>
+              <motion.div className="relative z-10 group-hover:translate-x-1 transition-transform flex-shrink-0">
+                <LocationOnIcon />
+              </motion.div>
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-md" />
             </a>
           </div>
         </motion.div>

@@ -69,11 +69,16 @@ const Footer = ({ theme }) => {
           className='text-gray-600 dark:text-gray-400'>
           <h3 className='font-semibold'>Subscribe to our newsletter</h3>
           <p className='text-sm mt-2 mb-6'>The latest news, articles and resources, sent to your inbox weekly.</p>
-          <div className='flex gap-2 text-sm'>
+          <div className='flex gap-2 text-sm items-stretch'>
             <input type="email" placeholder='Enter your Email' className='w-full
             p-3 text-sm outline-none rounded dark:text-gray-200 bg-transparent
             border border-gray-300 dark:border-gray-500' />
-            <button className='bg-primary text-white px-6 rounded'>Subscribe</button>
+            <div className='flex items-center'>
+              <button className='relative overflow-hidden group flex items-center gap-2 bg-gradient-to-r from-[#e77504] to-[#f0a510] text-white px-6 py-3 rounded-md font-semibold shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all duration-300 whitespace-nowrap'>
+                <span className='relative z-10'>Subscribe</span>
+                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-md" />
+              </button>
+            </div>
           </div>
         </motion.div>
       </div>
@@ -101,7 +106,7 @@ const Footer = ({ theme }) => {
           </a>
         </div>
       </motion.div>
-    </motion.div>
+    </motion.div >
   )
 }
 

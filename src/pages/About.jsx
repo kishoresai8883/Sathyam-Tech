@@ -190,7 +190,7 @@ export const About = () => {
                     <TrackChangesIcon className="w-4 h-4 text-accent dark:text-white" />
                   </div>
                   <p className="text-foreground dark:text-white font-semibold text-base md:text-lg">
-                    Innovative IT Solutions
+                    100% Customer Satisfaction
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
@@ -198,15 +198,20 @@ export const About = () => {
                     <PsychologyIcon className="w-4 h-4 text-accent dark:text-white" />
                   </div>
                   <p className="text-foreground dark:text-white font-semibold text-base md:text-lg">
-                    End-to-End Solutions
+                    Quality Assurance Guarantee
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-6">
-                <Link to="/contact" variant="teal" size="lg" className="inline-flex  items-center justify-center px-8 py-3 gap-2 bg-primary text-white hover:bg-primary-dark rounded-md font-semibold shadow-lg hover:shadow-xl cursor-pointer hover:scale-102 transition-all duration-300">
-                  Get In Touch
-                  <img src={assets.arrow_icon} className="w-5 h-5" />
+              <div className="flex items-center gap-6 justify-center sm:justify-start">
+                <Link to="/contact" className='relative overflow-hidden group flex items-center gap-3 bg-gradient-to-r from-[#e77504] to-[#f0a510] text-white px-8 py-3 rounded-md font-semibold shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all duration-300 w-max'>
+                  <span className='relative z-10'>Get In Touch</span>
+                  <motion.img
+                    src={assets.arrow_icon}
+                    alt="arrow"
+                    className='w-4 h-4 brightness-0 invert relative z-10 group-hover:translate-x-1 transition-transform flex-shrink-0'
+                  />
+                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-md" />
                 </Link>
               </div>
             </div>

@@ -29,9 +29,9 @@ const OurWork = () => {
       whileInView="visible"
       transition={{ staggerChildren: 0.2 }}
       viewport={{ once: true }}
-      id='our-work' className='flex flex-col items-center gap-7 px-4
+      id='our-work' className='flex flex-col items-center px-4
       sm:px-12 lg:px-24 xl:px-40 pt-28 text-gray-700 dark:text-white'>
-      <Title title='Our Latest Work' desc='From strategy to execution, we craft digital solutions that move your business forward.' />
+      <Title title='Our Latest Work' desc='Our focus is simple — combine smart design with robust development to deliver outstanding results.' />
       <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl'>
         {
           workData.map((work, index) => (

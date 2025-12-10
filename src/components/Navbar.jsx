@@ -62,10 +62,17 @@ const Navbar = ({ theme, setTheme }) => {
         <div className='flex items-center gap-2 sm:gap-4'>
           <ThemeToggleBtn theme={theme} setTheme={setTheme} />
           <img src={theme === 'dark' ? assets.menu_icon_dark : assets.menu_icon} alt="theme toggle" onClick={() => setSidebarOpen(true)} className="w-8 sm:hidden" />
-          <Link to="/contact" className='text-sm max-sm:hidden flex items-center
-            gap-2 bg-primary text-white px-6 py-2 rounded-full cursor-pointer hover:scale-103 trasition-all'>
-            Connect <img src={assets.arrow_icon} width={14} height={14} alt='connect button' />
-          </Link>
+          <div className='flex max-sm:hidden'>
+            <Link to='/contact' className='relative overflow-hidden group flex items-center gap-3 bg-gradient-to-r from-[#e77504] to-[#f0a510] text-white px-6 py-2 rounded-full font-semibold shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all duration-300'>
+              <span className='relative z-10'>Connect</span>
+              <motion.img
+                src={assets.arrow_icon}
+                alt="arrow"
+                className='w-4 h-4 brightness-0 invert relative z-10 group-hover:translate-x-1 transition-transform'
+              />
+              <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-full" />
+            </Link>
+          </div>
         </div>
       </motion.div>
     </>

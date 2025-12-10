@@ -43,10 +43,9 @@ const Contact = () => {
             whileInView="visible"
             transition={{ staggerChildren: 0.2 }}
             viewport={{ once: true }}
-            id='contact-us' className='flex flex-col items-center gap-7 px-4 sm:px-12
+            id='contact-us' className='flex flex-col items-center px-4 sm:px-12
                 lg:px-24 xl:px-40 py-28 text-gray-700 dark:text-white'>
-            <Title title='Reach out Us' desc='From strategy to execution, we craft digital
-      solutions that move your business forward.'/>
+            <Title title='Reach out Us' desc='Want to discuss a project or a service? We’d love to hear from you. Contact us - we’re ready to help' />
             <div className='grid md:grid-cols-2 gap-10 w-full items-center'>
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -116,10 +115,17 @@ const Contact = () => {
                         <textarea rows={8} name='message' placeholder='Enter you message' className='w-full
                 p-3 text-sm outline-none rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent' required />
                     </div>
-                    <button type='submit' className='w-max flex gap-2 bg-primary text-white
-            text-sm px-10 py-3 rounded-md cursor-pointer hover:scale-102 transition-all'>
-                        Submit <img src={assets.arrow_icon} alt="submit" width={16} height={16} className='w-4' />
-                    </button>
+                    <div className='flex justify-center sm:justify-start'>
+                        <button type='submit' className='relative overflow-hidden group flex items-center gap-3 bg-gradient-to-r from-[#e77504] to-[#f0a510] text-white px-8 py-3 rounded-md font-semibold shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all duration-300 w-max'>
+                            <span className='relative z-10'>Submit</span>
+                            <motion.img
+                                src={assets.arrow_icon}
+                                alt="arrow"
+                                className='w-4 h-4 brightness-0 invert relative z-10 group-hover:translate-x-1 transition-transform flex-shrink-0'
+                            />
+                            <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-md" />
+                        </button>
+                    </div>
                 </motion.form>
             </div>
 
