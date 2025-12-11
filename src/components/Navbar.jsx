@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import assets from '../assets/assets'
-import ThemeToggleBtn from './ThemeToggleBtn'
+import { ThemeToggleBtn } from './ThemeToggleBtn'
 import { motion } from 'motion/react'
 import Logo from '../assets/Logo.webp'
 import { Link } from 'react-router-dom'
