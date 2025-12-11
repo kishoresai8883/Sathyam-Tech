@@ -15,6 +15,7 @@ import AboutPage from './pages/About.jsx'
 import ContactPage from './pages/Contact.jsx'
 import ServicesPage from './pages/Services.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
+import WhatsAppBtn from './components/WhatsAppBtn.jsx'
 import Loader from './components/Loader.jsx'
 import { AnimatePresence } from 'motion/react'
 import ReactGA from "react-ga4";
@@ -62,6 +63,7 @@ const App = () => {
             <Toaster />
             <Navbar theme={theme} setTheme={setTheme} />
             <ScrollToTop />
+            <WhatsAppBtn />
             <Routes>
               <Route path='/' element={<HomePage />} />
               <Route path='/about' element={<AboutPage />} />

@@ -1,11 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import bgImg from '../assets/Hero-bg-img.webp';
+import bgImg from '../assets/bg_cta.webp';
 
 const CTA = () => {
   return (
-    <section className="py-20 lg:px-20 bg-center text-white" style={{ backgroundImage: `url(${bgImg})` }}>
+    <section className="py-20 lg:px-20 bg-cover bg-center text-white" style={{ backgroundImage: `url(${bgImg})` }}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
           <motion.div
@@ -22,16 +22,16 @@ const CTA = () => {
               Your website is more than just an online presence — it’s your brand’s first impression.
               At <span className='text-[#e77504]'>Sathyam Tech Solutions,</span> we ensure it’s a lasting one.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-white text-blue-700 hover:bg-blue-50 py-3 px-6 rounded-md font-medium flex items-center justify-center transition-colors"
               >
                 Schedule a Consultation
               </Link>
-              <Link 
-                to="/services" 
+              <Link
+                to="/services"
                 className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-700 text-white py-3 px-6 rounded-md font-medium flex items-center justify-center transition-all"
               >
                 Browse Our Services

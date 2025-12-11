@@ -7,24 +7,24 @@ import { motion } from 'motion/react'
 
 const servicesData = [
   {
-    title: "Website Development",
-    description: "We turn bold ideal into powerful digital solutions that connect, engage...",
+    title: "Custom Website Development",
+    description: "We create custom websites tailored to your business needs, ensuring a seamless user experience and effective online presence.",
     icon: assets.ads_icon
   },
   {
     title: "App Development",
-    description: "We turn bold ideal into powerful digital solutions that connect, engage...",
+    description: "We develop custom mobile applications for iOS and Android, delivering tailored solutions that enhance user engagement.",
     icon: assets.marketing_icon
   },
   {
     title: "UI/UX Design",
-    description: "We turn bold ideal into powerful digital solutions that connect, engage...",
-    icon: assets.marketing_icon
+    description: "We design user-friendly interfaces that enhance user experience and improve the overall user journey.",
+    icon: assets.content_icon
   },
   {
     title: "Digital Marketing",
-    description: "We turn bold ideal into powerful digital solutions that connect, engage...",
-    icon: assets.ads_icon
+    description: "We implement effective digital marketing strategies to improve brand visibility, drive traffic, and increase conversions.",
+    icon: assets.social_icon
   }
 ]
 
