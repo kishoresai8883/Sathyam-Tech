@@ -6,6 +6,7 @@ import { motion } from 'motion/react'
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import CTA from '../components/CTA'
 
 const Contact = () => {
   const [result, setResult] = useState("");
@@ -222,6 +223,7 @@ const Contact = () => {
           </div>
         </motion.div>
       </section>
+      <CTA />
     </>
   )
 }

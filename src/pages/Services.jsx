@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import hero from '../assets/about_hero.webp'
 
 import ServicesList from '../components/Services'
+import CTA from '../components/CTA'
 
 const Services = () => {
   return (
@@ -34,6 +35,7 @@ const Services = () => {
       </section>
 
       <ServicesList />
+      <CTA />
     </>
   )
 }
