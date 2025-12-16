@@ -38,7 +38,7 @@ const About = () => {
     ];
 
     return (
-        <section className='relative w-full py-24 overflow-hidden'>
+        <section className='relative w-full py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden'>
             {/* Background Decorations */}
             <div className="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-orange-100/40 dark:bg-orange-900/10 rounded-full blur-[100px] opacity-60" />
             <div className="absolute bottom-0 left-0 -z-10 w-[500px] h-[500px] bg-blue-100/40 dark:bg-blue-900/10 rounded-full blur-[80px] opacity-60" />
@@ -49,7 +49,7 @@ const About = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className='mb-8 text-center'
+                    className='mb-8 sm:mb-12 text-center'
                 >
                     <Title title="About Us" desc='We are a team of passionate web developers and designers dedicated to crafting user-friendly, high-performance websites that help businesses grow' />
                 </motion.div>
@@ -59,7 +59,7 @@ const About = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: "-50px" }}
-                    className='grid lg:grid-cols-2 gap-16 lg:gap-24 items-center'
+                    className='grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 xl:gap-24 items-center'
                 >
                     {/* Image Section */}
                     <motion.div variants={itemVariants} className='relative group order-2 lg:order-1'>
@@ -83,31 +83,31 @@ const About = () => {
 
                     {/* Content Section */}
                     <motion.div variants={itemVariants} className='flex flex-col order-1 lg:order-2'>
-                        <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight'>
+                        <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight text-center sm:text-left'>
                             Our dedicated Team committed to your <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">success</span>
                         </h2>
 
-                        <p className='text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed'>
+                        <p className='text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed text-center sm:text-left px-4 sm:px-0'>
                             A passionate team bringing friendly web solutions to businesses—turning your ideas into vibrant online experiences. We blend creativity with technical expertise to deliver results.
                         </p>
 
-                        <div className='grid gap-4 mb-10'>
+                        <div className='grid gap-4 mb-10 px-4 sm:px-0'>
                             {features.map((feature, index) => (
                                 <motion.div
                                     key={index}
                                     whileHover={{ x: 5 }}
                                     className='flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm transition-all duration-300'
                                 >
-                                    <div className={`p-3 rounded-xl ${feature.bg} ${feature.color}`}>
+                                    <div className={`p-3 rounded-xl ${feature.bg} ${feature.color} flex-shrink-0`}>
                                         {feature.icon}
                                     </div>
-                                    <span className='font-medium text-gray-700 dark:text-gray-200'>{feature.text}</span>
+                                    <span className='font-medium text-gray-700 dark:text-gray-200 text-sm sm:text-base'>{feature.text}</span>
                                 </motion.div>
                             ))}
                         </div>
 
-                        <div className='flex justify-center sm:justify-start'>
-                            <Link to='/about' className='relative overflow-hidden group flex items-center gap-3 bg-gradient-to-r from-[#e77504] to-[#f0a510] text-white px-8 py-3 rounded-md font-semibold shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all duration-300'>
+                        <div className='flex justify-center sm:justify-start px-4 sm:px-0'>
+                            <Link to='/about' className='relative overflow-hidden group flex items-center gap-3 bg-gradient-to-r from-[#e77504] to-[#f0a510] text-white px-6 sm:px-8 py-3 rounded-md font-semibold shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all duration-300'>
                                 <span className='relative z-10'>Know More</span>
                                 <motion.img
                                     src={assets.arrow_icon}

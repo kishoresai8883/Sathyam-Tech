@@ -115,6 +115,9 @@ export const About = () => {
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-light mb-6 text-white">
             About <span className="text-[#e77504] font-light">us</span>
           </h1>
+          <p className="max-w-2xl text-lg md:text-xl text-gray-200 mb-8 font-light">
+            Driven by innovation, guided by excellence. Learn about the people behind your next big project.
+          </p>
 
           <nav className="flex items-center gap-3 text-sm tracking-wider">
             <Link

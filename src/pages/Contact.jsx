@@ -6,6 +6,7 @@ import { motion } from 'motion/react'
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import CTA from '../components/CTA'
 
 const Contact = () => {
@@ -54,6 +55,9 @@ const Contact = () => {
           <h1 className="text-5xl md:text-7xl font-light mb-6 text-white">
             Contact <span className="text-[#e77504] font-light">us</span>
           </h1>
+          <p className="max-w-2xl text-lg md:text-xl text-gray-200 mb-8 font-light">
+            Ready to take your business to the next level? Get in touch and let's create something amazing together.
+          </p>
 
           <nav className="flex items-center gap-3 text-sm tracking-wider">
             <Link
@@ -91,7 +95,7 @@ const Contact = () => {
             </div>
 
             <div className="space-y-8">
-              <div className="flex items-start gap-5 group">
+              <a href="mailto:sathyamtechsolutions@gmail.com" target='_blank' rel='noreferrer' className="flex items-start gap-5 group cursor-pointer">
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
                   <EmailIcon className="text-orange-500 group-hover:text-white transition-colors" />
                 </div>
@@ -99,9 +103,8 @@ const Contact = () => {
                   <h3 className="font-semibold text-lg mb-1">Email Us</h3>
                   <p className="text-gray-500 dark:text-gray-400">sathyamtechsolutions@gmail.com</p>
                 </div>
-              </div>
-
-              <div className="flex items-start gap-5 group">
+              </a>
+              <a href="tel:+919502908883" target='_blank' rel='noreferrer' className="flex items-start gap-5 group cursor-pointer">
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
                   <PhoneIcon className="text-orange-500 group-hover:text-white transition-colors" />
                 </div>
@@ -109,9 +112,17 @@ const Contact = () => {
                   <h3 className="font-semibold text-lg mb-1">Call Us</h3>
                   <p className="text-gray-500 dark:text-gray-400">+91 9502908883</p>
                 </div>
-              </div>
-
-              <div className="flex items-start gap-5 group">
+              </a>
+              <a href="https://wa.me/919502908883" target='_blank' rel='noreferrer' className="flex items-start gap-5 group cursor-pointer">
+                <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                  <WhatsAppIcon className="text-orange-500 group-hover:text-white transition-colors" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg mb-1">WhatsApp Us</h3>
+                  <p className="text-gray-500 dark:text-gray-400">+91 9502908883</p>
+                </div>
+              </a>
+              <a href="https://maps.app.goo.gl/YourMapLinkHere" target='_blank' rel='noreferrer' className="flex items-start gap-5 group cursor-pointer">
                 <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
                   <LocationOnIcon className="text-orange-500 group-hover:text-white transition-colors" />
                 </div>
@@ -119,7 +130,7 @@ const Contact = () => {
                   <h3 className="font-semibold text-lg mb-1">Visit Us</h3>
                   <p className="text-gray-500 dark:text-gray-400">2nd Floor, Huda Layout,<br /> Hyderabad, India</p>
                 </div>
-              </div>
+              </a>
             </div>
           </motion.div>
 
