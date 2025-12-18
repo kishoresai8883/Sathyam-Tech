@@ -37,8 +37,6 @@ const Services = () => {
       viewport={{ once: true }}
       id='services' className='relative flex flex-col items-center px-4
     sm:px-12 lg:px-24 xl:px-40 pt-28 text-gray-700 dark:text-white'>
-      <img src={assets.bgImage2} alt="service bgimg" width={1920} height={1415} loading="lazy" className='absolute -top-60 -left-80
-        -z-10 dark:hidden'/>
       <Title title='How can we help?' desc='Where technology meets creativity.
 We deliver digital experiences that make brands stand out.' />
       <div className='flex flex-col md:grid grid-cols-2'>

@@ -37,7 +37,6 @@ const Hero = () => {
         viewport={{ once: true }}
         className='relative'>
         <img src={heroImg} alt="hero img" width={1000} height={563} className='w-full max-w-6xl rounded-3xl' />
-        <img src={assets.bgImage1} alt="bg img" width={1920} height={1415} fetchPriority="high" className='absolute -top-72 -right-60 sm:-top-100 sm:-right-70 -z-10 dark:hidden' />
       </motion.div>
     </div>
   )

@@ -4,6 +4,7 @@ import { motion } from 'motion/react'
 import CTA from '../components/CTA'
 import hero from '../assets/about_hero.webp'
 import assets from '../assets/assets'
+import Title from '../components/Title'
 
 const servicesData = [
   {
@@ -82,15 +83,7 @@ const Services = () => {
       <section className="py-20 px-6 md:px-16 lg:px-24">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4"
-            >
-              What We <span className="text-[#e77504]">Offer</span>
-            </motion.h2>
-            <div className="h-1 w-20 bg-[#e77504] mx-auto rounded-full"></div>
+            <Title title='What We Offer' />
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">

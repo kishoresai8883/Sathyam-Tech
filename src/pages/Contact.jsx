@@ -8,6 +8,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import CTA from '../components/CTA'
+import Title from '../components/Title'
 
 const Contact = () => {
   const [result, setResult] = useState("");
@@ -195,13 +196,7 @@ const Contact = () => {
           className="max-w-7xl mx-auto"
         >
           <div className="text-center mb-12">
-            <div className='relative w-fit group mx-auto mb-4'>
-              <h2 className='text-3xl md:text-4xl font-bold text-gray-700 dark:text-white'>Find Us Here</h2>
-              <span className='absolute bottom-0 left-1/2 w-0 h-0.5 bg-orange-400 group-hover:w-full group-hover:left-0 transition-all duration-300'></span>
-            </div>
-            <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-              Visit our office in Hyderabad. We're conveniently located and ready to meet with you.
-            </p>
+            <Title title="Find Us Here" desc="Visit our office in Hyderabad. We're conveniently located and ready to meet with you." />
           </div>
 
           <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[400px] md:h-[500px] border-4 border-white dark:border-gray-800">
