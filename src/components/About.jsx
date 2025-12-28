@@ -83,13 +83,11 @@ const About = () => {
 
                     {/* Content Section */}
                     <motion.div variants={itemVariants} className='flex flex-col order-1 lg:order-2'>
-                        <h2 className='text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight text-center sm:text-left'>
-                            Our dedicated Team committed to your <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">success</span>
+                        <h2 className='text-xl md:text-2xl lg:text-2xl font-medium text-gray-700 dark:text-white mb-6 leading-tight text-center sm:text-left'>
+                            Our dedicated Team committed to your success
                         </h2>
 
-                        <p className='text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed text-center sm:text-left px-4 sm:px-0'>
-                            A passionate team bringing friendly web solutions to businesses—turning your ideas into vibrant online experiences. We blend creativity with technical expertise to deliver results.
-                        </p>
+
 
                         <div className='grid gap-4 mb-10 px-4 sm:px-0'>
                             {features.map((feature, index) => (

@@ -10,7 +10,7 @@ const Title = ({ title, desc }) => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className='text-3xl sm:text-5xl font-medium text-gray-700 dark:text-white'>
+          className='text-3xl sm:text-5xl font-medium text-gray-900 dark:text-white'>
           {title}
           <span className='absolute bottom-0 left-1/2 w-0 h-[3.5px] bg-orange-400 group-hover:w-full group-hover:left-0 transition-all duration-300'></span>
         </motion.h2>

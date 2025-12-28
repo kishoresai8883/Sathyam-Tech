@@ -18,7 +18,7 @@ const servicesData = [
     id: 2,
     title: "Mobile App Development",
     description: "Transform your ideas into powerful mobile experiences. We develop native and cross-platform apps for both iOS and Android platforms.",
-    features: ["iOS & Android", "Cross-Platform (Flutter/React Native)", "User-Centric Design", "App Store Deployment"],
+    features: ["iOS & Android", "Cross-Platform (React Native)", "User-Centric Design", "App Store Deployment"],
     icon: assets.marketing_icon
   },
   {
@@ -34,6 +34,13 @@ const servicesData = [
     description: "Accelerate your growth with data-driven digital marketing strategies. We help you reach your target audience and convert leads.",
     features: ["Search Engine Optimization (SEO)", "Social Media Marketing", "Content Strategy", "PPC Advertising"],
     icon: assets.social_icon
+  },
+  {
+    id: 5,
+    title: "AI Solutions",
+    description: "We develop AI solutions to help you automate and optimize your business processes.",
+    features: ["Automation", "Chatbots & Text analysis", "Image recognition & business analysis", "Predictive Analytics"],
+    icon: assets.marketing_icon
   }
 ]
 

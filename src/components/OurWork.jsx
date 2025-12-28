@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import assets from '../assets/assets'
 import Project1 from '../assets/bluewave_project_img.webp'
-import Project2 from '../assets/biomart_project_img.webp'
+import Project2 from '../assets/biomart_project_img1.webp'
 import Title from './Title'
 import { motion } from 'motion/react'
 
@@ -49,6 +50,17 @@ const OurWork = () => {
               <p className='text-sm w-5/6 opacity-60'>{work.description}</p>
             </motion.div>
           ))}
+      </div>
+      <div className='flex mb-4 mt-8 justify-center sm:justify-start'>
+        <Link to='/contact' className='relative overflow-hidden group flex items-center gap-3 bg-gradient-to-r from-[#e77504] to-[#f0a510] text-white px-8 py-3 rounded-md font-semibold shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all duration-300'>
+          <span className='relative z-10'>Let's Discuss</span>
+          <motion.img
+            src={assets.arrow_icon}
+            alt="arrow"
+            className='w-4 h-4 brightness-0 invert relative z-10 group-hover:translate-x-1 transition-transform'
+          />
+          <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-md" />
+        </Link>
       </div>
     </motion.div>
   )
