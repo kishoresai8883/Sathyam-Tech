@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import toast from 'react-hot-toast'
-import hero from '../assets/about_hero.webp'
+import hero from '../assets/contact_hero.webp'
 import { motion } from 'motion/react'
 import EmailIcon from '@mui/icons-material/Email';
 import PhoneIcon from '@mui/icons-material/Phone';

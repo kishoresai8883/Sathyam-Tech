@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
 import CTA from '../components/CTA'
-import hero from '../assets/about_hero.webp'
+import hero from '../assets/service_hero.webp'
 import assets from '../assets/assets'
 import Title from '../components/Title'
 

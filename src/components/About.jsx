@@ -40,8 +40,14 @@ const About = () => {
     return (
         <section className='relative w-full py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden'>
             {/* Background Decorations */}
-            <div className="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-orange-100/40 dark:bg-orange-900/10 rounded-full blur-[100px] opacity-60" />
-            <div className="absolute bottom-0 left-0 -z-10 w-[500px] h-[500px] bg-blue-100/40 dark:bg-blue-900/10 rounded-full blur-[80px] opacity-60" />
+            <div
+                className="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-orange-100/40 dark:bg-orange-900/10 rounded-full blur-[100px] opacity-60"
+                style={{ width: '600px', height: '600px' }}
+            />
+            <div
+                className="absolute bottom-0 left-0 -z-10 w-[500px] h-[500px] bg-blue-100/40 dark:bg-blue-900/10 rounded-full blur-[80px] opacity-60"
+                style={{ width: '500px', height: '500px' }}
+            />
 
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <motion.div
@@ -67,6 +73,10 @@ const About = () => {
                             <img
                                 src={aboutImg}
                                 alt="Our Team"
+                                width="800"
+                                height="600"
+                                fetchpriority="high"
+                                loading="eager"
                                 className='w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110'
                             />
                             {/* Glassmorphism Overlay */}
