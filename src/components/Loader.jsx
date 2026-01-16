@@ -47,6 +47,9 @@ const Loader = () => {
                         <img
                             src="/Favicon.webp"
                             alt="Loading..."
+                            width="112"
+                            height="147"
+                            style={{ aspectRatio: '112/147', maxWidth: '112px' }}
                             className="w-16 sm:w-20 object-contain drop-shadow-lg"
                         />
                     </motion.div>

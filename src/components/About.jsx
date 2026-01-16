@@ -38,15 +38,20 @@ const About = () => {
     ];
 
     return (
-        <section className='relative w-full py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden'>
+        <section
+            className='relative w-full py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden'
+            style={{ minHeight: '600px', contain: 'layout' }}
+        >
             {/* Background Decorations */}
             <div
                 className="absolute top-0 right-0 -z-10 w-[600px] h-[600px] bg-orange-100/40 dark:bg-orange-900/10 rounded-full blur-[100px] opacity-60"
-                style={{ width: '600px', height: '600px' }}
+                style={{ width: '600px', height: '600px', willChange: 'opacity' }}
+                aria-hidden="true"
             />
             <div
                 className="absolute bottom-0 left-0 -z-10 w-[500px] h-[500px] bg-blue-100/40 dark:bg-blue-900/10 rounded-full blur-[80px] opacity-60"
-                style={{ width: '500px', height: '500px' }}
+                style={{ width: '500px', height: '500px', willChange: 'opacity' }}
+                aria-hidden="true"
             />
 
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -77,6 +82,7 @@ const About = () => {
                                 height="600"
                                 fetchpriority="high"
                                 loading="eager"
+                                style={{ aspectRatio: '800/600', height: 'auto' }}
                                 className='w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110'
                             />
                             {/* Glassmorphism Overlay */}

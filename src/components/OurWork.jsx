@@ -44,7 +44,15 @@ const OurWork = () => {
               key={index}
               className='bg-white dark:bg-gray-800/30 rounded-xl p-4 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer border border-gray-100 dark:border-gray-700/50'>
               <div className='w-full h-[250px] overflow-hidden rounded-xl shadow-md'>
-                <img src={work.image} alt="work images" loading="lazy" className='w-full h-full object-fill rounded-xl transition-transform duration-500 hover:scale-110' />
+                <img
+                  src={work.image}
+                  alt="work images"
+                  width="606"
+                  height="438"
+                  loading="lazy"
+                  style={{ aspectRatio: '606/438', objectFit: 'cover' }}
+                  className='w-full h-full object-fill rounded-xl transition-transform duration-500 hover:scale-110'
+                />
               </div>
               <h3 className='mt-4 mb-2 text-lg font-semibold'>{work.title}</h3>
               <p className='text-sm w-5/6 opacity-60'>{work.description}</p>

@@ -35,8 +35,19 @@ const Hero = () => {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 1.2 }}
         viewport={{ once: true }}
-        className='relative'>
-        <img src={heroImg} alt="hero img" width={1000} height={563} className='w-full max-w-6xl rounded-3xl' />
+        className='relative'
+        style={{ maxWidth: '1200px', margin: '0 auto' }}
+      >
+        <img
+          src={heroImg}
+          alt="hero img"
+          width={1000}
+          height={563}
+          loading="eager"
+          fetchpriority="high"
+          style={{ aspectRatio: '1000/563', height: 'auto' }}
+          className='w-full max-w-6xl rounded-3xl'
+        />
       </motion.div>
     </div>
   )

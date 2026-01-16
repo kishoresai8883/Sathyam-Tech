@@ -37,7 +37,17 @@ const Navbar = ({ theme, setTheme }) => {
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className="flex justify-between items-center px-4 sm:px-12 lg:px-24 xl:px-40
           py-2 fixed top-0 left-0 right-0 z-50 backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/70">
-        <Link to="/"><img src={theme === 'dark' ? Logo : Logo} alt="logo" width={176} height={58} className='w-36 sm:w-44' /></Link>
+        <Link to="/">
+          <img
+            src={theme === 'dark' ? Logo : Logo}
+            alt="logo"
+            width={176}
+            height={58}
+            loading="eager"
+            style={{ aspectRatio: '176/58', height: 'auto' }}
+            className='w-36 sm:w-44'
+          />
+        </Link>
         <div className={`text-gray-700 dark:text-white sm:text-md font-bold ${!sidebarOpen ? 'max-sm:w-0 overflow-hidden' : 'max-sm:w-60 max-sm:pl-10'} max-sm:fixed top-0 bottom-0
           right-0 max-sm:min-h-screen max-sm:h-full ${theme === 'dark' ? 'max-sm:bg-gray-900 max-sm:text-white' : 'max-sm:bg-white max-sm:text-gray-700'} max-sm:pt-20
           flex flex-col sm:flex-row sm:items-center gap-5 transition-all`}>

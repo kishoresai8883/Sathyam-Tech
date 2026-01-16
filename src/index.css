@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+/* Manrope font loaded in index.html for better performance */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-    font-family: 'Manrope', sans-serif;
-    font-weight: 500;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
 }
 
 @layer base {
@@ -14,7 +14,7 @@
     --color-primary: #5044E5;
     --primary: 175 60% 38%;
     --primary-foreground: 0 0% 100%;
-}
+  }
 }
 
 .animate-spin-slow {
