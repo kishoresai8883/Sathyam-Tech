@@ -133,14 +133,25 @@ export const About = () => {
       </section>
       <section className="py-12 md:py-20 px-4 md:px-6 bg-secondary/30 dark:bg-gray-900/30 overflow-hidden">
         <div className="container mx-auto max-w-7xl">
+          <div className="text-center max-w-4xl mx-auto">
+            <p className="text-[#e77504] text-sm font-semibold tracking-wider uppercase mb-4">
+                // ABOUT US
+            </p>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight md:leading-loose text-foreground dark:text-white">
+              Empowering Businesses Through{" "}
+              <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
+                Digital Solutions
+              </span>
+            </h1>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left side - Images */}
-            <div className="relative mb-10 lg:mb-0">
+            <div className="relative mt-4 lg:mb-0">
               <div className="relative md:ml-12">
                 {/* Experience badge */}
                 <div className="absolute -top-4 -left-2 md:-top-6 md:-left-6 z-20 bg-gradient-to-br from-[#e77504] to-[#f0a510] rounded-3xl p-4 md:p-6 shadow-xl scale-90 md:scale-100 origin-top-left">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-8 h-8 rounded-full border-2 border-primary-foreground/50 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-full border-2 border-black flex items-center justify-center">
                       <EmojiEventsIcon className="w-4 h-4" />
                     </div>
                   </div>
@@ -158,27 +169,21 @@ export const About = () => {
                 </div>
 
                 {/* Bottom right portrait */}
-                <div className="absolute -bottom-6 -right-2 md:-bottom-8 md:-right-8 w-48 md:w-64 h-40 md:h-52 rounded-3xl overflow-hidden shadow-2xl border-4 border-background dark:border-gray-800">
+
+                {/* <div className="absolute -bottom-6 -right-2 md:-bottom-8 md:-right-8 w-48 md:w-64 h-40 md:h-52 rounded-3xl overflow-hidden shadow-2xl border-4 border-background dark:border-gray-800">
                   <img
                     src={aboutImg2}
                     alt="Business professional"
                     className="w-full h-full object-cover"
                   />
-                </div>
+                </div>*/}
+
               </div>
             </div>
 
             {/* Right side - Content */}
-            <div className="lg:pl-8 mt-8 lg:mt-0">
-              <p className="text-[#e77504] text-sm font-semibold tracking-wider uppercase mb-4">
-                // ABOUT US
-              </p>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight md:leading-loose text-foreground dark:text-white">
-                Empowering Businesses Through{" "}
-                <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
-                  Digital Solutions
-                </span>
-              </h1>
+            <div className="lg:pl-8 mt-4 lg:mt-0">
+
 
               <p className="text-muted-foreground dark:text-gray-300 text-base md:text-lg mb-8 leading-relaxed">
                 At <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
@@ -222,19 +227,22 @@ export const About = () => {
         </div>
       </section>
       <section className="py-12 md:py-20 px-4 md:px-6 bg-background dark:bg-black relative">
-        <p className="text-[#e77504] text-sm text-center font-semibold tracking-wider uppercase mb-4">
-            // OUR APPROACH
-        </p>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-4 text-foreground dark:text-white">
-          We Turn Ideas into Interactive{" "}
-          <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
-            Experiences.
-          </span>
-        </h2>
+
         <div className="container mx-auto max-w-7xl">
+          <div className="text-center max-w-4xl mx-auto">
+            <p className="text-[#e77504] text-sm text-center font-semibold tracking-wider uppercase mb-4">
+            // OUR APPROACH
+            </p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-4 text-foreground dark:text-white">
+              We Turn Ideas into Interactive{" "}
+              <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
+                Experiences.
+              </span>
+            </h2>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mt-12">
             {/* Left side - Content */}
-            <div className="order-2 lg:order-1">
+            <div className="order-2 lg:order-1 md:mt-6">
               <div className="space-y-8">
                 {approaches.map((item, index) => (
                   <div key={index}>
@@ -320,15 +328,17 @@ export const About = () => {
       </section>
       <section className="py-12 md:py-20 px-4 md:px-6 bg-secondary/30 dark:bg-gray-900/30 overflow-hidden">
         <div className="container mx-auto max-w-7xl">
-          <p className="text-[#e77504] text-sm text-center font-semibold tracking-wider uppercase mb-4">
+          <div className="text-center max-w-5xl mx-auto">
+            <p className="text-[#e77504] text-sm text-center font-semibold tracking-wider uppercase mb-4">
             // WHY CHOOSE US ?
-          </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-6 text-foreground dark:text-white">
-            Every line of code we write is focused on one goal that is your {" "}
-            <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
-              Online Success
-            </span>
-          </h2>
+            </p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl text-center font-bold mb-6 text-foreground dark:text-white">
+              Every line of code we write is focused on one goal that is your {" "}
+              <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
+                Online Success
+              </span>
+            </h2>
+          </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mt-10">
             {/* Left side - Content */}
             <div>

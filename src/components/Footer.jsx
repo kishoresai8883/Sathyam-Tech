@@ -95,7 +95,7 @@ const Footer = ({ theme }) => {
           <a href="https://www.linkedin.com/in/kishore-sai" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110 group">
             <img src={assets.linkedin_icon} alt="linkedin icon" width={20} height={20} className="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:saturate-100 group-hover:invert-[.45] group-hover:sepia-[1] group-hover:saturate-[5] group-hover:hue-rotate-[340deg]" />
           </a>
-          <a href="https://instagram.com/kishoresai_g" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110 group">
+          <a href="https://instagram.com/sathyamtechsolutions" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110 group">
             <img src={assets.instagram_icon} alt="instagram icon" width={20} height={20} className="w-5 h-5 transition-all duration-300 group-hover:brightness-0 group-hover:saturate-100 group-hover:invert-[.45] group-hover:sepia-[1] group-hover:saturate-[5] group-hover:hue-rotate-[340deg]" />
           </a>
           <a href="https://twitter.com/Sai207Sai" target="_blank" rel="noopener noreferrer" className="transition-all duration-300 hover:scale-110 group">

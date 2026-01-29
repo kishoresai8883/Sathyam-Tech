@@ -215,7 +215,7 @@ const Contact = () => {
 
           <div className="text-center mt-8">
             <a
-              href="https://www.google.com/maps/dir//Hyderabad,+Telangana/@17.412608,78.24323149999999,12z"
+              href="https://www.google.com/maps/place/13-1-146%2F2,+Mothi+Nagar,+Rama+Rao+Nagar,+Borabanda,+Hyderabad,+Telangana+500114/@17.4547082,78.4216184,19z/data=!4m15!1m8!3m7!1s0x3bcb911b0d7d275d:0x407689b0171afb3!2sKabir+Nagar,+Madhavi+Estate,+Moti+Nagar,+Erragadda,+Hyderabad,+Telangana+500114!3b1!8m2!3d17.4570297!4d78.4224741!16s%2Fg%2F11ww6d3sgg!3m5!1s0x3bcb911bc8362a63:0x5a879d47515eb27d!8m2!3d17.4547244!4d78.4217562!16s%2Fg%2F11x91q0zvr?entry=ttu&g_ep=EgoyMDI2MDEyNi4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="relative overflow-hidden group inline-flex items-center gap-3 bg-gradient-to-r from-[#e77504] to-[#f0a510] text-white px-8 py-3 rounded-md font-semibold shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all duration-300 w-max"
