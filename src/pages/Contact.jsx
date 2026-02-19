@@ -129,7 +129,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-1">Visit Us</h3>
-                  <p className="text-gray-500 dark:text-gray-400">2nd Floor, Huda Layout,<br /> Hyderabad, India</p>
+                  <p className="text-gray-500 dark:text-gray-400">2nd Floor, Community hall complex, Motinagar,<br /> Hyderabad, India</p>
                 </div>
               </a>
             </div>
@@ -201,7 +201,7 @@ const Contact = () => {
 
           <div className="relative rounded-3xl overflow-hidden shadow-2xl h-[400px] md:h-[500px] border-4 border-white dark:border-gray-800">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160484866!2d78.24323149999999!3d17.412608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1733421347000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2050.839553049734!2d78.420882161191!3d17.458509725816207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb911b3a5106b9%3A0x9fa0e4eee495225a!2sDeccan%20Ice%20Blocks%20Cubes%20Dry%20Ice%20Suppliers!5e0!3m2!1sen!2sin!4v1771521209081!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -215,7 +215,7 @@ const Contact = () => {
 
           <div className="text-center mt-8">
             <a
-              href="https://www.google.com/maps/place/13-1-146%2F2,+Mothi+Nagar,+Rama+Rao+Nagar,+Borabanda,+Hyderabad,+Telangana+500114/@17.4547082,78.4216184,19z/data=!4m15!1m8!3m7!1s0x3bcb911b0d7d275d:0x407689b0171afb3!2sKabir+Nagar,+Madhavi+Estate,+Moti+Nagar,+Erragadda,+Hyderabad,+Telangana+500114!3b1!8m2!3d17.4570297!4d78.4224741!16s%2Fg%2F11ww6d3sgg!3m5!1s0x3bcb911bc8362a63:0x5a879d47515eb27d!8m2!3d17.4547244!4d78.4217562!16s%2Fg%2F11x91q0zvr?entry=ttu&g_ep=EgoyMDI2MDEyNi4wIKXMDSoASAFQAw%3D%3D"
+              href="https://www.google.com/maps/place/Deccan+Ice+Blocks+Cubes+Dry+Ice+Suppliers/@17.4583228,78.4207803,18z/data=!3m1!4b1!4m15!1m8!3m7!1s0x3bcb911b0d7d275d:0x407689b0171afb3!2sKabir+Nagar,+Madhavi+Estate,+Moti+Nagar,+Erragadda,+Hyderabad,+Telangana+500114!3b1!8m2!3d17.4570297!4d78.4224741!16s%2Fg%2F11ww6d3sgg!3m5!1s0x3bcb911b3a5106b9:0x9fa0e4eee495225a!8m2!3d17.4583228!4d78.4220678!16s%2Fg%2F11yh1bcj29?entry=ttu&g_ep=EgoyMDI2MDIxNi4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="relative overflow-hidden group inline-flex items-center gap-3 bg-gradient-to-r from-[#e77504] to-[#f0a510] text-white px-8 py-3 rounded-md font-semibold shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all duration-300 w-max"

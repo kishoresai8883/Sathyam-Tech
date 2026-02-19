@@ -93,7 +93,7 @@ const Contact = () => {
                             </div>
                             <div>
                                 <h3 className="font-semibold text-lg mb-1">Visit Us</h3>
-                                <p className="text-gray-500 dark:text-gray-400">2nd Floor, Huda Layout,<br /> Hyderabad, India</p>
+                                <p className="text-gray-500 dark:text-gray-400">2nd Floor, Community hall complex, Motinagar,<br /> Hyderabad, India</p>
                             </div>
                         </a>
                     </div>

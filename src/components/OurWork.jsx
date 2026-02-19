@@ -33,7 +33,7 @@ const OurWork = () => {
       id='our-work' className='flex flex-col items-center px-4
       sm:px-12 lg:px-24 xl:px-40 pt-28 text-gray-700 dark:text-white'>
       <Title title='Our Latest Work' desc='Our focus is simple — combine smart design with robust development to deliver outstanding results.' />
-      <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl mt-8'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full max-w-5xl mt-8'>
         {
           workData.map((work, index) => (
             <motion.div
@@ -42,22 +42,25 @@ const OurWork = () => {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
               key={index}
-              className='bg-white dark:bg-gray-800/30 rounded-xl p-4 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer border border-gray-100 dark:border-gray-700/50'>
-              <div className='w-full h-[250px] overflow-hidden rounded-xl shadow-md'>
+              className='bg-white dark:bg-gray-800/30 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer border border-gray-100 dark:border-gray-700/50 flex flex-col'>
+              <div className='w-full h-54 sm:h-52 lg:h-56 overflow-hidden'>
                 <img
                   src={work.image}
-                  alt="work images"
+                  alt={work.title}
                   width="606"
-                  height="438"
+                  height="340"
                   loading="lazy"
-                  style={{ aspectRatio: '606/438', objectFit: 'cover' }}
-                  className='w-full h-full object-fill rounded-xl transition-transform duration-500 hover:scale-110'
+                  style={{ objectPosition: 'top center' }}
+                  className='w-full h-full object-cover transition-transform duration-500 hover:scale-105'
                 />
               </div>
-              <h3 className='mt-4 mb-2 text-lg font-semibold'>{work.title}</h3>
-              <p className='text-sm w-5/6 opacity-60'>{work.description}</p>
+              <div className='p-3 sm:p-4 flex flex-col flex-1'>
+                <h3 className='mb-2 text-lg font-semibold leading-snug'>{work.title}</h3>
+                <p className='text-sm opacity-60 leading-relaxed flex-grow'>{work.description}</p>
+              </div>
             </motion.div>
           ))}
+
       </div>
       <div className='flex mb-4 mt-8 justify-center sm:justify-start'>
         <Link to='/contact' className='relative overflow-hidden group flex items-center gap-3 bg-gradient-to-r from-[#e77504] to-[#f0a510] text-white px-8 py-3 rounded-md font-semibold shadow-xl shadow-orange-500/20 hover:shadow-orange-500/40 transition-all duration-300'>
