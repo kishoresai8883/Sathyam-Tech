@@ -1,28 +1,24 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-//import TrustedBy from './components/TrustedBy'
 import About from './components/About'
 import Services from './components/Services'
 import OurWork from './components/OurWork'
-//import Teams from './components/Teams'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { Toaster } from 'react-hot-toast'
 import CTA from './components/CTA'
-import AboutPage from './pages/About.jsx'
-import ContactPage from './pages/Contact.jsx'
-import ServicesPage from './pages/Services.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import WhatsAppBtn from './components/WhatsAppBtn.jsx'
 import Loader from './components/Loader.jsx'
 import { AnimatePresence } from 'motion/react'
-import ReactGA from "react-ga4";
 import Analytics from './components/Analytics.jsx';
 
-ReactGA.initialize("G-6ZJ6JECC2Z");
-ReactGA.send("pageview");
+// Lazy-load page-level routes so they don't block the initial bundle
+const AboutPage = lazy(() => import('./pages/About.jsx'))
+const ContactPage = lazy(() => import('./pages/Contact.jsx'))
+const ServicesPage = lazy(() => import('./pages/Services.jsx'))
 
 
 const App = () => {
@@ -31,12 +27,15 @@ const App = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // Simulate loading time - adjust duration as needed
-    const timer = setTimeout(() => {
-      setLoading(false)
-    }, 2000) // 2 seconds loading time
+    // Initialize GA deferred so it doesn't block initial render
+    import('react-ga4').then(({ default: ReactGA }) => {
+      ReactGA.initialize('G-6ZJ6JECC2Z')
+      ReactGA.send('pageview')
+    })
 
-    return () => clearTimeout(timer)
+    // Minimal loader – just one frame to mount the app cleanly
+    const timer = requestAnimationFrame(() => setLoading(false))
+    return () => cancelAnimationFrame(timer)
   }, [])
 
   const HomePage = () => (
@@ -66,9 +65,9 @@ const App = () => {
             <WhatsAppBtn />
             <Routes>
               <Route path='/' element={<HomePage />} />
-              <Route path='/about' element={<AboutPage />} />
-              <Route path='/contact' element={<ContactPage />} />
-              <Route path='/services' element={<ServicesPage />}></Route>
+              <Route path='/about' element={<Suspense fallback={null}><AboutPage /></Suspense>} />
+              <Route path='/contact' element={<Suspense fallback={null}><ContactPage /></Suspense>} />
+              <Route path='/services' element={<Suspense fallback={null}><ServicesPage /></Suspense>} />
               <Route path='*' element={<Navigate to="/" />} />
             </Routes>
             <Footer theme={theme} />

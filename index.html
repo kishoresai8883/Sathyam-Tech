@@ -22,6 +22,13 @@
     #root {
       min-height: 100vh;
     }
+
+    /* Reserve space for hero image to reduce CLS */
+    #hero img[fetchpriority="high"] {
+      aspect-ratio: 1000 / 563;
+      width: 100%;
+      height: auto;
+    }
   </style>
 
   <!-- Preconnect to Google Fonts for faster loading - MUST be before any font requests -->
@@ -64,6 +71,15 @@
   <meta property="og:site_name" content="Sathyam Tech Solutions">
 
   <title>Sathyam Tech Solutions | Web & Mobile App Development Agency in Hyderabad</title>
+
+  <!-- Google tag (gtag.js) - loaded async so it never blocks rendering -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZJ6JECC2Z"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-6ZJ6JECC2Z', { 'send_page_view': false });
+  </script>
 </head>
 
 <body>

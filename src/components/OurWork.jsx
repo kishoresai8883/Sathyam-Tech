@@ -50,7 +50,9 @@ const OurWork = () => {
                   width="606"
                   height="340"
                   loading="lazy"
-                  style={{ objectPosition: 'top center' }}
+                  decoding="async"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  style={{ objectPosition: 'center top' }}
                   className='w-full h-full object-cover transition-transform duration-500 hover:scale-105'
                 />
               </div>

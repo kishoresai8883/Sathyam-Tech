@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-
 // https://vite.dev/config/
 export default defineConfig({
   server: {
@@ -11,6 +10,8 @@ export default defineConfig({
     react(),
   ],
   build: {
+    // Target modern browsers to reduce transpilation overhead
+    target: 'es2020',
     // Enable CSS code splitting
     cssCodeSplit: true,
     // Reduce chunk size warnings threshold
@@ -18,10 +19,19 @@ export default defineConfig({
     rollupOptions: {
       output: {
         // Manual chunking for better caching
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'mui-vendor': ['@mui/icons-material'],
-          'animation-vendor': ['motion', 'framer-motion'],
+        manualChunks(id) {
+          if (id.includes('node_modules/react') ||
+            id.includes('node_modules/react-dom') ||
+            id.includes('node_modules/react-router-dom')) {
+            return 'react-vendor'
+          }
+          if (id.includes('node_modules/motion') ||
+            id.includes('node_modules/framer-motion')) {
+            return 'animation-vendor'
+          }
+          if (id.includes('node_modules/@mui')) {
+            return 'mui-vendor'
+          }
         },
         // Asset file names
         assetFileNames: (assetInfo) => {
@@ -38,7 +48,8 @@ export default defineConfig({
         entryFileNames: 'assets/js/[name]-[hash].js',
       },
     },
-    // Minify with esbuild (faster than terser and included with Vite)
+    // Use terser for better minification and dead-code elimination
     minify: 'esbuild',
   },
 })
+
