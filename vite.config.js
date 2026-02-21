@@ -22,15 +22,9 @@ export default defineConfig({
         manualChunks(id) {
           if (id.includes('node_modules/react') ||
             id.includes('node_modules/react-dom') ||
+            id.includes('node_modules/react-ga4') ||
             id.includes('node_modules/react-router-dom')) {
             return 'react-vendor'
-          }
-          if (id.includes('node_modules/motion') ||
-            id.includes('node_modules/framer-motion')) {
-            return 'animation-vendor'
-          }
-          if (id.includes('node_modules/@mui')) {
-            return 'mui-vendor'
           }
         },
         // Asset file names
