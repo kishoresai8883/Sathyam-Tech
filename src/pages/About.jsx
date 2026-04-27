@@ -138,9 +138,9 @@ export const About = () => {
                 // ABOUT US
             </p>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight md:leading-loose text-foreground dark:text-white">
-              Empowering Businesses Through{" "}
+              About{" "}
               <span className="bg-gradient-to-r from-[#e77504] to-[#f0a510] bg-clip-text text-transparent">
-                Digital Solutions
+                Sathyam Tech Solutions
               </span>
             </h1>
           </div>

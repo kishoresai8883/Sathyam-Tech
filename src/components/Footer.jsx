@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import assets from '../assets/assets'
 import { motion } from 'motion/react'
-import Logo from '../assets/Logo.webp'
+import Logo from '../assets/Mylogo_bg_trans.png'
 
 const Footer = ({ theme }) => {
 

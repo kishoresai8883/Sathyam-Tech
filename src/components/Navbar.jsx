@@ -2,7 +2,7 @@ import { useState } from 'react'
 import assets from '../assets/assets'
 import { ThemeToggleBtn } from './ThemeToggleBtn'
 import { motion, AnimatePresence } from 'motion/react'
-import Logo from '../assets/Logo.webp'
+import Logo from '../assets/Mylogo_bg_trans.png'
 import { Link } from 'react-router-dom'
 
 const navLinks = [
@@ -25,7 +25,7 @@ const Navbar = ({ theme, setTheme }) => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
         className="flex justify-between items-center px-4 sm:px-12 lg:px-24 xl:px-40
-          py-2 fixed top-0 left-0 right-0 z-50 backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/70">
+          py-2 fixed top-0 left-0 right-0 z-50 backdrop-blur-xl font-medium bg-gray-100 dark:bg-transparent">
         <Link to="/">
           <img
             src={Logo}
@@ -39,12 +39,12 @@ const Navbar = ({ theme, setTheme }) => {
         </Link>
 
         {/* Desktop nav links */}
-        <div className="hidden sm:flex sm:items-center gap-5 text-gray-700 dark:text-white font-bold sm:text-md">
+        <div className="hidden sm:flex sm:items-center gap-5 font-bold sm:text-md">
           {navLinks.map(({ label, to }) => (
             <Link
               key={to}
               to={to}
-              className='nav-link relative transition-all duration-300 hover:text-orange-500 dark:hover:text-orange-400 group'
+              className='nav-link relative transition-all duration-300 text-gray-900 dark:text-white hover:text-orange-500 dark:hover:text-orange-400 group'
             >
               {label}
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-orange-500 to-orange-600 group-hover:w-full transition-all duration-300 ease-out" />
@@ -99,7 +99,7 @@ const Navbar = ({ theme, setTheme }) => {
                 onClick={closeSidebar}
                 aria-label="Close menu"
                 className="w-9 h-9 flex items-center justify-center rounded-full
-                  bg-gray-100 dark:bg-gray-800 hover:bg-orange-50 dark:hover:bg-orange-950/30
+                  bg-gray-400 dark:bg-gray-400 hover:bg-orange-50 dark:hover:bg-orange-950/30
                   transition-colors"
               >
                 <img
@@ -122,7 +122,7 @@ const Navbar = ({ theme, setTheme }) => {
                   <Link
                     to={to}
                     onClick={closeSidebar}
-                    className="text-2xl font-bold tracking-wide hover:text-orange-500
+                    className="text-2xl font-bold tracking-wide text-gray-900 dark:text-white hover:text-orange-500
                       dark:hover:text-orange-400 transition-colors duration-200"
                   >
                     {label}

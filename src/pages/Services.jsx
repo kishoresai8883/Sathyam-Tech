@@ -51,6 +51,58 @@ const processSteps = [
   { step: '04', title: 'Launch', desc: 'We test, deploy, and ensure everything runs smoothly.' },
 ]
 
+const ServiceGridCard = ({ service, index }) => {
+  const [position, setPosition] = React.useState({ x: 0, y: 0 });
+  const [visible, setVisible] = React.useState(false);
+  const divRef = React.useRef(null);
+
+  const handleMouseMove = (e) => {
+    if (!divRef.current) return;
+    const bounds = divRef.current.getBoundingClientRect();
+    setPosition({ x: e.clientX - bounds.left, y: e.clientY - bounds.top });
+  };
+
+  return (
+    <motion.div
+      ref={divRef}
+      onMouseEnter={() => setVisible(true)}
+      onMouseLeave={() => setVisible(false)}
+      onMouseMove={handleMouseMove}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1, duration: 0.5 }}
+      viewport={{ once: true }}
+      className="relative overflow-hidden rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 group"
+    >
+      <div 
+        className={`pointer-events-none blur-2xl rounded-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 w-[300px] h-[300px] absolute z-0 transition-opacity duration-500 mix-blend-lighten ${visible ? 'opacity-70' : 'opacity-0'}`}
+        style={{ top: position.y - 150, left: position.x - 150 }} 
+      />
+      <div className="p-8 hover:p-[30px] hover:m-[2px] transition-all bg-white dark:bg-gray-800 z-10 relative rounded-2xl h-full flex flex-col md:flex-row gap-6 items-start">
+        <div className="w-16 h-16 p-3 bg-orange-50 dark:bg-gray-700 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
+          <img src={service.icon} alt={service.title} className="w-full h-full object-contain" />
+        </div>
+        <div>
+          <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-3 group-hover:text-[#e77504] transition-colors">
+            {service.title}
+          </h3>
+          <p className="text-gray-600 dark:text-gray-300 mb-5 leading-relaxed">
+            {service.description}
+          </p>
+          <ul className="grid sm:grid-cols-2 gap-2">
+            {service.features.map((feature, i) => (
+              <li key={i} className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                <span className="w-1.5 h-1.5 bg-[#e77504] rounded-full"></span>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
+
 const Services = () => {
   return (
     <>
@@ -95,36 +147,7 @@ const Services = () => {
 
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             {servicesData.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                viewport={{ once: true }}
-                className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-transparent hover:border-[#e77504] group"
-              >
-                <div className="flex flex-col md:flex-row gap-6 items-start">
-                  <div className="w-16 h-16 p-3 bg-orange-50 dark:bg-gray-700 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <img src={service.icon} alt={service.title} className="w-full h-full object-contain" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-3 group-hover:text-[#e77504] transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-5 leading-relaxed">
-                      {service.description}
-                    </p>
-                    <ul className="grid sm:grid-cols-2 gap-2">
-                      {service.features.map((feature, i) => (
-                        <li key={i} className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                          <span className="w-1.5 h-1.5 bg-[#e77504] rounded-full"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </motion.div>
+              <ServiceGridCard key={service.id} service={service} index={index} />
             ))}
           </div>
         </div>
