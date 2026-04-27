@@ -34,10 +34,14 @@
   <!-- Preconnect to Google Fonts for faster loading - MUST be before any font requests -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.google.co.in">
+  <link rel="preconnect" href="https://analytics.google.com">
 
   <!-- DNS Prefetch for external resources -->
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://www.google.co.in">
+  <link rel="dns-prefetch" href="https://analytics.google.com">
 
   <!-- Load Manrope font asynchronously with font-display swap -->
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"
@@ -74,13 +78,20 @@
 
   <title>Sathyam Tech Solutions | Web & Mobile App Development Agency in Hyderabad</title>
 
-  <!-- Google tag (gtag.js) - loaded async so it never blocks rendering -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6ZJ6JECC2Z"></script>
+  <!-- Google tag (gtag.js) - Deferred loading to improve performance -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-6ZJ6JECC2Z', { 'send_page_view': false });
+
+    // Defer the actual script download by 3.5 seconds
+    setTimeout(() => {
+      const script = document.createElement('script');
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-6ZJ6JECC2Z";
+      script.async = true;
+      document.head.appendChild(script);
+    }, 3500);
   </script>
 </head>
 

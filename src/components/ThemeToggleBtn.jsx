@@ -23,7 +23,7 @@ export const ThemeToggleBtn = ({ theme, setTheme }) => {
             className='size-8.5 p-1.5 border border-gray-500 rounded-full' />
         ) : (
           <img src={assets.moon_icon} alt="theme-toggle" width={34} height={34} onClick={() => setTheme('dark')}
-            className='size-8.5 p-1.5 border border-gray-500 bg-gray-300 rounded-full' />
+            className='size-8.5 p-1.5 border border-gray-500 bg-gray-100 rounded-full' />
         )}
       </button>
     </>

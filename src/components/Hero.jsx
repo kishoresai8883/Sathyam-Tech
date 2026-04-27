@@ -86,9 +86,9 @@ const Hero = () => {
 
         <motion.div style={{ x: titleX, y: titleY }}>
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0.01, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className='text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-semibold
               sl:leading-[1.1] max-w-6xl tracking-tight'>We build high-performance <span className='bg-gradient-to-r from-orange-400 via-orange-500 to-[#f0a510] bg-clip-text
               text-transparent'>Digital Solutions</span> that scale your Business</motion.h1>
@@ -114,7 +114,7 @@ const Hero = () => {
               to='/contact'
               className='inline-flex items-center gap-2 px-8 py-3.5 rounded-md font-semibold text-white
                 bg-gradient-to-r from-[#e77504] to-[#f0a510]
-                shadow-md shadow-orange-300 dark:shadow-orange-900/30
+                shadow-sm shadow-orange-300 dark:shadow-orange-900/30
                 hover:shadow-lg dark:shadow-orange-300 dark:hover:shadow-orange-800/40
                 hover:-translate-y-0.5 active:translate-y-0
                 transition-all duration-200'

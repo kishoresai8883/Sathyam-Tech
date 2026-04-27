@@ -33,7 +33,7 @@ const Navbar = ({ theme, setTheme }) => {
             width={176}
             height={58}
             loading="eager"
-            style={{ aspectRatio: '176/58', height: 'auto' }}
+            style={{ aspectRatio: '440/171', height: 'auto' }}
             className='w-36 sm:w-44'
           />
         </Link>
