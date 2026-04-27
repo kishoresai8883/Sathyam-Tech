@@ -63,13 +63,15 @@ const App = () => {
             <Navbar theme={theme} setTheme={setTheme} />
             <ScrollToTop />
             <WhatsAppBtn />
-            <Routes>
-              <Route path='/' element={<HomePage />} />
-              <Route path='/about' element={<Suspense fallback={null}><AboutPage /></Suspense>} />
-              <Route path='/contact' element={<Suspense fallback={null}><ContactPage /></Suspense>} />
-              <Route path='/services' element={<Suspense fallback={null}><ServicesPage /></Suspense>} />
-              <Route path='*' element={<Navigate to="/" />} />
-            </Routes>
+            <div className="min-h-screen">
+              <Routes>
+                <Route path='/' element={<HomePage />} />
+                <Route path='/about' element={<Suspense fallback={<div className="min-h-screen" />}><AboutPage /></Suspense>} />
+                <Route path='/contact' element={<Suspense fallback={<div className="min-h-screen" />}><ContactPage /></Suspense>} />
+                <Route path='/services' element={<Suspense fallback={<div className="min-h-screen" />}><ServicesPage /></Suspense>} />
+                <Route path='*' element={<Navigate to="/" />} />
+              </Routes>
+            </div>
             <Footer theme={theme} />
           </div>
         </Router>

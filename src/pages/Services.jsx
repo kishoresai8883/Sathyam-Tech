@@ -32,7 +32,7 @@ const servicesData = [
     id: 4,
     title: "Digital Marketing",
     description: "Accelerate your growth with data-driven digital marketing strategies. We help you reach your target audience and convert leads.",
-    features: ["Search Engine Optimization (SEO)", "Social Media Marketing", "Content Strategy", "PPC Advertising"],
+    features: ["Search Engine Optimization (SEO)", "Social Media Marketing", "Content Strategy", "Google My Business"],
     icon: assets.social_icon
   },
   {
@@ -41,6 +41,13 @@ const servicesData = [
     description: "We develop AI solutions to help you automate and optimize your business processes.",
     features: ["Automation", "Chatbots & Text analysis", "Image recognition & business analysis", "Predictive Analytics"],
     icon: assets.marketing_icon
+  },
+  {
+    id: 6,
+    title: "Maintenance & Support",
+    description: "We ensure your digital products stay secure, up-to-date, and perform optimally round the clock.",
+    features: ["Server Monitoring", "Security Updates", "Bug Fixing", "Performance Optimization"],
+    icon: assets.content_icon
   }
 ]
 
@@ -49,6 +56,7 @@ const processSteps = [
   { step: '02', title: 'Strategy', desc: 'We create a tailored roadmap and design the best solution for you.' },
   { step: '03', title: 'Development', desc: 'Our experts build your product using the latest technologies.' },
   { step: '04', title: 'Launch', desc: 'We test, deploy, and ensure everything runs smoothly.' },
+  { step: '05', title: 'Maintenance & Support', desc: 'We provide ongoing updates, monitoring, and dedicated support.' },
 ]
 
 const ServiceGridCard = ({ service, index }) => {
@@ -74,9 +82,9 @@ const ServiceGridCard = ({ service, index }) => {
       viewport={{ once: true }}
       className="relative overflow-hidden rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-2xl transition-all duration-300 group"
     >
-      <div 
+      <div
         className={`pointer-events-none blur-2xl rounded-full bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 w-[300px] h-[300px] absolute z-0 transition-opacity duration-500 mix-blend-lighten ${visible ? 'opacity-70' : 'opacity-0'}`}
-        style={{ top: position.y - 150, left: position.x - 150 }} 
+        style={{ top: position.y - 150, left: position.x - 150 }}
       />
       <div className="p-8 hover:p-[30px] hover:m-[2px] transition-all bg-white dark:bg-gray-800 z-10 relative rounded-2xl h-full flex flex-col md:flex-row gap-6 items-start">
         <div className="w-16 h-16 p-3 bg-orange-50 dark:bg-gray-700 rounded-xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform duration-300">
@@ -167,7 +175,7 @@ const Services = () => {
             <p className="text-gray-300 max-w-2xl mx-auto">We follow a structured agile approach to ensure smooth delivery and high-quality results.</p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-5 gap-6">
             {processSteps.map((item, index) => (
               <motion.div
                 key={index}

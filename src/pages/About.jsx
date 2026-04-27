@@ -149,7 +149,7 @@ export const About = () => {
             <div className="relative mt-4 lg:mb-0">
               <div className="relative md:ml-12">
                 {/* Experience badge */}
-                <div className="absolute -top-4 -left-2 md:-top-6 md:-left-6 z-20 bg-gradient-to-br from-[#e77504] to-[#f0a510] rounded-3xl p-4 md:p-6 shadow-xl scale-90 md:scale-100 origin-top-left">
+                {/*<div className="absolute -top-4 -left-2 md:-top-6 md:-left-6 z-20 bg-gradient-to-br from-[#e77504] to-[#f0a510] rounded-3xl p-4 md:p-6 shadow-xl scale-90 md:scale-100 origin-top-left">
                   <div className="flex items-center gap-2 mb-2">
                     <div className="w-8 h-8 rounded-full border-2 border-black flex items-center justify-center">
                       <EmojiEventsIcon className="w-4 h-4" />
@@ -157,7 +157,7 @@ export const About = () => {
                   </div>
                   <p className="text-lg md:text-xl font-bold">12+ projects</p>
                   <p className="text-lg md:text-xl font-bold">completed</p>
-                </div>
+                </div>*/}
 
                 {/* Main image */}
                 <div className="relative">

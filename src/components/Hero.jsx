@@ -42,7 +42,7 @@ const Hero = () => {
 
   return (
     <div id="hero" onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}
-      className='relative flex flex-col items-center justify-center pt-28 pb-16 px-4 sm:px-12
+      className='relative flex flex-col items-center justify-center pt-20 md:pt-32 pb-16 px-4 sm:px-12
       lg:px-24 xl:px-40 w-full min-h-[100vh] overflow-hidden bg-[#030303] text-white'>
 
       {/* Fancy dark background grid and gradients with Parallax Effect */}
@@ -54,7 +54,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,black_40%,transparent_100%)]"></div>
       </motion.div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center gap-8 text-center w-full max-w-6xl">
+      <div className="relative z-10 flex flex-col items-center justify-center gap-6 sm:gap-8 text-center w-full max-w-6xl mt-12 sm:mt-0">
         <motion.div style={{ x: badgeX, y: badgeY }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -73,7 +73,7 @@ const Hero = () => {
               boxShadow: { duration: 2.2, delay: 1, repeat: Infinity, ease: 'easeInOut' },
             }}
             className='inline-flex items-center gap-2 border border-orange-500/40
-              bg-orange-950/40 backdrop-blur-md px-5 py-2 rounded-full'
+              bg-orange-950/40 backdrop-blur-md px-4 py-2 rounded-full'
           >
             {/* Pulsing live dot */}
             <span className='relative flex h-2 w-2'>
@@ -90,7 +90,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className='text-4xl sm:text-5xl md:text-6xl xl:text-[84px] font-semibold
-              sl:leading-[1.1] max-w-6xl tracking-tight'>We build high-performance <span className='bg-gradient-to-r from-orange-400 via-orange-500 to-[#f0a510] bg-clip-text
+              leading-tight sm:leading-[1.1] max-w-6xl tracking-tight'>We build high-performance <span className='bg-gradient-to-r from-orange-400 via-orange-500 to-[#f0a510] bg-clip-text
               text-transparent'>Digital Solutions</span> that scale your Business</motion.h1>
         </motion.div>
 
@@ -100,7 +100,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             className='text-base sm:text-xl font-medium text-white/70
-              max-w-3xl pb-6 leading-relaxed m-auto'>Bringing innovative ideas to life as engaging, interactive Digital experiences that spark authentic connections.</motion.p>
+              max-w-3xl pb-2 sm:pb-6 leading-relaxed m-auto px-2 sm:px-0'>Bringing innovative ideas to life as engaging, interactive Digital experiences that spark authentic connections.</motion.p>
         </motion.div>
 
         {/* Contact Button */}
