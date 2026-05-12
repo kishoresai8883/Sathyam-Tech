@@ -19,6 +19,7 @@ import Analytics from './components/Analytics.jsx';
 const AboutPage = lazy(() => import('./pages/About.jsx'))
 const ContactPage = lazy(() => import('./pages/Contact.jsx'))
 const ServicesPage = lazy(() => import('./pages/Services.jsx'))
+const ServiceDetailPage = lazy(() => import('./pages/ServiceDetail.jsx'))
 
 
 const App = () => {
@@ -69,6 +70,7 @@ const App = () => {
                 <Route path='/about' element={<Suspense fallback={<div className="min-h-screen" />}><AboutPage /></Suspense>} />
                 <Route path='/contact' element={<Suspense fallback={<div className="min-h-screen" />}><ContactPage /></Suspense>} />
                 <Route path='/services' element={<Suspense fallback={<div className="min-h-screen" />}><ServicesPage /></Suspense>} />
+                <Route path='/services/:id' element={<Suspense fallback={<div className="min-h-screen" />}><ServiceDetailPage /></Suspense>} />
                 <Route path='*' element={<Navigate to="/" />} />
               </Routes>
             </div>
