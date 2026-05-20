@@ -9,7 +9,7 @@ const InteractiveDotGrid = ({
   maxRadius = 3.2,
   hoverRadius = 140,
   magneticStrength = 0.12, // Responsive magnetic pull
-  gridSpacing = 16 // Fine dotted density spacing
+  gridSpacing = 24 // Fine dotted density spacing
 }) => {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
@@ -87,7 +87,7 @@ const InteractiveDotGrid = ({
             currentX: x,
             currentY: y,
             size: baseRadius,
-            alpha: isDarkMode ? 0.08 : 0.07,
+            alpha: isDarkMode ? 0.08 : 0.06,
             color: isDarkMode ? dotColorDark : dotColorLight
           });
         }
@@ -239,6 +239,15 @@ const InteractiveDotGrid = ({
       }
 
       // 3. Draw grid matrix of reactive dots
+      const defaultColor = isDarkMode ? dotColorDark : dotColorLight;
+      const restingAlpha = isDarkMode ? 0.08 : 0.06;
+
+      // Batch path for all settled/resting dots to minimize draw calls and state switches
+      ctx.beginPath();
+      ctx.fillStyle = defaultColor;
+
+      const activeDots = [];
+
       for (let i = 0; i < dots.length; i++) {
         const dot = dots[i];
 
@@ -252,11 +261,38 @@ const InteractiveDotGrid = ({
           dist = Math.sqrt(dx * dx + dy * dy);
         }
 
+        // A dot is settled if it has returned to its base size, position, and alpha
+        const isSettled = Math.abs(dot.size - baseRadius) < 0.01 &&
+                          Math.abs(dot.currentX - dot.x) < 0.05 &&
+                          Math.abs(dot.currentY - dot.y) < 0.05 &&
+                          Math.abs(dot.alpha - restingAlpha) < 0.01;
+
+        if (isSettled && dist >= hoverRadius) {
+          // Snap directly to resting values to prevent sub-pixel drifting and keep numbers integers/fixed
+          dot.size = baseRadius;
+          dot.currentX = dot.x;
+          dot.currentY = dot.y;
+          dot.alpha = restingAlpha;
+
+          // Add to the single batch path
+          ctx.moveTo(dot.x + baseRadius, dot.y);
+          ctx.arc(dot.x, dot.y, baseRadius, 0, Math.PI * 2);
+        } else {
+          // Store active/moving dots to process and render separately
+          activeDots.push({ dot, dx, dy, dist });
+        }
+      }
+      ctx.fill(); // Single draw call for thousands of resting dots! Extremely fast!
+
+      // Draw only the active/kinetic dots individually
+      for (let i = 0; i < activeDots.length; i++) {
+        const { dot, dx, dy, dist } = activeDots[i];
+
         let targetSize = baseRadius;
-        let targetAlpha = isDarkMode ? 0.08 : 0.06;
+        let targetAlpha = restingAlpha;
         let targetX = dot.x;
         let targetY = dot.y;
-        let color = isDarkMode ? dotColorDark : dotColorLight;
+        let color = isDarkMode ? hoverColorDark : hoverColorLight;
 
         if (dist < hoverRadius) {
           const force = (hoverRadius - dist) / hoverRadius; // 0 to 1
@@ -268,8 +304,8 @@ const InteractiveDotGrid = ({
           // Magnetic pull towards cursor
           targetX = dot.x + dx * easeForce * magneticStrength;
           targetY = dot.y + dy * easeForce * magneticStrength;
-
-          color = isDarkMode ? hoverColorDark : hoverColorLight;
+        } else {
+          color = isDarkMode ? dotColorDark : dotColorLight;
         }
 
         // Kinetic transitions

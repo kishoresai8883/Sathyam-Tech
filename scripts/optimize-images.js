@@ -20,9 +20,20 @@ const images = [
     { path: 'src/assets/hero_img1.webp', width: 1200, quality: 80 },
     { path: 'src/assets/Logo.webp', width: 220, quality: 90 },
     { path: 'src/assets/bluewave_project_img.webp', width: 500, quality: 80 },
-    { path: 'src/assets/biomart_project_img.webp', width: 500, quality: 80 },
+    { path: 'src/assets/biomart_project_img1.webp', width: 500, quality: 80 },
     { path: 'src/assets/about.webp', width: 500, quality: 80 },
     { path: 'src/assets/work_mobile_app.webp', width: 500, quality: 80 },
+    { path: 'src/assets/why_choose.webp', width: 1200, quality: 80 },
+    { path: 'src/assets/about3.webp', width: 1000, quality: 80 },
+    { path: 'src/assets/service_hero.webp', width: 1200, quality: 80 },
+    { path: 'src/assets/approach.webp', width: 1000, quality: 80 },
+    { path: 'src/assets/contact_hero.webp', width: 1200, quality: 80 },
+    { path: 'src/assets/about2.webp', width: 1000, quality: 80 },
+    { path: 'src/assets/about1.webp', width: 800, quality: 80 },
+    { path: 'src/assets/about_hero.webp', width: 1200, quality: 80 },
+    { path: 'src/assets/bg_cta.webp', width: 1200, quality: 80 },
+    { path: 'src/assets/hero_img.webp', width: 1200, quality: 80 },
+    { path: 'src/assets/Mylogo_bg_trans.png', width: 440, quality: 85 },
 ];
 
 async function processImages() {
@@ -39,10 +50,16 @@ async function processImages() {
                 // Read file to buffer first to avoid file locking issues
                 const inputBuffer = fs.readFileSync(filePath);
 
-                const outputBuffer = await sharp(inputBuffer)
-                    .resize({ width: img.width, withoutEnlargement: true })
-                    .webp({ quality: img.quality })
-                    .toBuffer();
+                let pipeline = sharp(inputBuffer)
+                    .resize({ width: img.width, withoutEnlargement: true });
+
+                if (filePath.endsWith('.png')) {
+                    pipeline = pipeline.png({ quality: img.quality || 85, compressionLevel: 9 });
+                } else {
+                    pipeline = pipeline.webp({ quality: img.quality || 80 });
+                }
+
+                const outputBuffer = await pipeline.toBuffer();
 
                 fs.writeFileSync(filePath, outputBuffer);
                 const newStats = fs.statSync(filePath);

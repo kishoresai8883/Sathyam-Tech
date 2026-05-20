@@ -56,28 +56,26 @@ const App = () => {
         {loading && <Loader key="loader" />}
       </AnimatePresence>
 
-      {!loading && (
-        <Router>
-          <Analytics />
-          <div className='dark:bg-black relative overflow-x-hidden'>
-            <Toaster />
-            <Navbar theme={theme} setTheme={setTheme} />
-            <ScrollToTop />
-            <WhatsAppBtn />
-            <div className="min-h-screen">
-              <Routes>
-                <Route path='/' element={<HomePage />} />
-                <Route path='/about' element={<Suspense fallback={<div className="min-h-screen" />}><AboutPage /></Suspense>} />
-                <Route path='/contact' element={<Suspense fallback={<div className="min-h-screen" />}><ContactPage /></Suspense>} />
-                <Route path='/services' element={<Suspense fallback={<div className="min-h-screen" />}><ServicesPage /></Suspense>} />
-                <Route path='/services/:id' element={<Suspense fallback={<div className="min-h-screen" />}><ServiceDetailPage /></Suspense>} />
-                <Route path='*' element={<Navigate to="/" />} />
-              </Routes>
-            </div>
-            <Footer theme={theme} />
+      <Router>
+        <Analytics />
+        <div className={`dark:bg-black relative overflow-x-hidden transition-opacity duration-500 ${loading ? 'pointer-events-none select-none h-screen overflow-hidden opacity-0' : 'opacity-100'}`}>
+          <Toaster />
+          <Navbar theme={theme} setTheme={setTheme} />
+          <ScrollToTop />
+          <WhatsAppBtn />
+          <div className="min-h-screen">
+            <Routes>
+              <Route path='/' element={<HomePage />} />
+              <Route path='/about' element={<Suspense fallback={<div className="min-h-screen" />}><AboutPage /></Suspense>} />
+              <Route path='/contact' element={<Suspense fallback={<div className="min-h-screen" />}><ContactPage /></Suspense>} />
+              <Route path='/services' element={<Suspense fallback={<div className="min-h-screen" />}><ServicesPage /></Suspense>} />
+              <Route path='/services/:id' element={<Suspense fallback={<div className="min-h-screen" />}><ServiceDetailPage /></Suspense>} />
+              <Route path='*' element={<Navigate to="/" />} />
+            </Routes>
           </div>
-        </Router>
-      )}
+          <Footer theme={theme} />
+        </div>
+      </Router>
     </>
   )
 }
