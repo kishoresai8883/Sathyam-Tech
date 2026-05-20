@@ -30,7 +30,20 @@ const App = () => {
   useEffect(() => {
     // Initialize GA deferred so it doesn't block initial render
     import('react-ga4').then(({ default: ReactGA }) => {
-      ReactGA.initialize('G-6ZJ6JECC2Z')
+      // Set global gtag flags to disable third-party advertising cookies and signals
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function() { dataLayer.push(arguments); };
+      window.gtag('set', 'allow_google_signals', false);
+      window.gtag('set', 'allow_ad_personalization_signals', false);
+      window.gtag('set', 'restricted_data_processing', true);
+
+      ReactGA.initialize('G-6ZJ6JECC2Z', {
+        gtagOptions: {
+          allow_google_signals: false,
+          allow_ad_personalization_signals: false,
+          restricted_data_processing: true
+        }
+      })
       ReactGA.send('pageview')
     })
 
