@@ -5,7 +5,7 @@ export const servicesData = [
     id: 1,
     title: "Custom Website Development",
     description: "We build high-performance, scalable, and secure websites tailored to your unique business needs. From corporate sites to complex web applications.",
-    features: ["Responsive Design", "SEO Optimized structure", "Fast Loading Speed", "Custom CMS Integration"],
+    features: ["Responsive Design", "SEO Optimized structure", "Fast & Secured", "Custom CMS Integration"],
     icon: assets.ads_icon
   },
   {

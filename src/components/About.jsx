@@ -32,8 +32,8 @@ const About = () => {
 
     const features = [
         { icon: <LightbulbIcon />, text: "Expert IT consulting and strategic planning", color: "text-amber-500", bg: "bg-amber-100 dark:bg-amber-900/20" },
-        { icon: <CodeIcon />, text: "Custom software development solutions", color: "text-blue-500", bg: "bg-blue-100 dark:bg-blue-900/20" },
-        { icon: <CloudIcon />, text: "Custom Web and App development", color: "text-sky-500", bg: "bg-sky-100 dark:bg-sky-900/20" },
+        { icon: <CodeIcon />, text: "Custom Web and App development", color: "text-blue-500", bg: "bg-blue-100 dark:bg-blue-900/20" },
+        { icon: <CloudIcon />, text: "Fast & Secured Website and App", color: "text-sky-500", bg: "bg-sky-100 dark:bg-sky-900/20" },
         { icon: <SupportAgentIcon />, text: "24/7 technical support and maintenance", color: "text-green-500", bg: "bg-green-100 dark:bg-green-900/20" },
     ];
 
@@ -85,7 +85,7 @@ const About = () => {
                             {/* Glassmorphism Overlay */}
                             <div className="absolute inset-x-0 bottom-0 bg-white/10 backdrop-blur-md border-t border-white/20 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                                 <p className="text-white font-semibold text-lg">Building Digital Excellence</p>
-                                <p className="text-white/80 text-sm">Since 2024</p>
+                                <p className="text-white/80 text-sm">Since 2025</p>
                             </div>
                         </div>
 

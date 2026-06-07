@@ -2,7 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import assets from '../assets/assets'
 import Project1 from '../assets/bluewave_project_img.webp'
-import Project2 from '../assets/biomart_project_img1.webp'
+import Project2 from '../assets/biomart_project_img.webp'
+import Project3 from '../assets/infinity_project_img.webp'
 import Title from './Title'
 import { motion } from 'motion/react'
 
@@ -19,9 +20,9 @@ const OurWork = () => {
       image: Project2
     },
     {
-      title: 'Furniture application',
-      description: 'A mobile application is designed and developed for furniture shopping with user-friendly interface and seamless navigation.',
-      image: assets.furniture_app
+      title: 'Infinity Interiors',
+      description: 'A Website is designed and developed to Infinity Glass & Interior Works, an interior & glass work solutions provider.',
+      image: Project3
     }
   ]
   return (
@@ -33,7 +34,7 @@ const OurWork = () => {
       id='our-work' className='flex flex-col items-center px-4
       sm:px-12 lg:px-24 xl:px-40 pt-28 text-gray-700 dark:text-white'>
       <Title title='Our Latest Work' desc='Our focus is simple — combine smart design with robust development to deliver outstanding results.' />
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full max-w-5xl mt-8'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full max-w-6xl mt-8'>
         {
           workData.map((work, index) => (
             <motion.div
@@ -43,7 +44,7 @@ const OurWork = () => {
               viewport={{ once: true }}
               key={index}
               className='bg-white dark:bg-gray-800/30 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer border border-gray-100 dark:border-gray-700/50 flex flex-col'>
-              <div className='w-full h-54 sm:h-52 lg:h-56 overflow-hidden'>
+              <div className='w-full aspect-video overflow-hidden'>
                 <img
                   src={work.image}
                   alt={work.title}
@@ -53,7 +54,7 @@ const OurWork = () => {
                   decoding="async"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   style={{ objectPosition: 'center top' }}
-                  className='w-full h-full object-cover transition-transform duration-500 hover:scale-105'
+                  className='w-full h-full object-fit transition-transform duration-500 hover:scale-105'
                 />
               </div>
               <div className='p-3 sm:p-4 flex flex-col flex-1'>
