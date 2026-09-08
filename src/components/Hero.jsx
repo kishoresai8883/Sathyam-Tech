@@ -122,7 +122,7 @@ const Hero = () => {
               <span className='relative inline-flex rounded-full h-2 w-2 bg-orange-500'></span>
             </span>
             <p className='text-xs font-semibold tracking-wider text-orange-400/90 uppercase'>
-              Next-Gen Development Agency
+              Next-Gen Web Development Agency
             </p>
           </motion.div>
         </motion.div>
