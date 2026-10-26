@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Services from './components/Services'
 import OurWork from './components/OurWork'
+import IndustriesWeServe from './components/IndustriesWeServe'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { Toaster } from 'react-hot-toast'
@@ -57,6 +58,7 @@ const App = () => {
       <Hero />
       <About />
       <Services />
+      <IndustriesWeServe />
       <OurWork />
       <Contact />
       <CTA />
