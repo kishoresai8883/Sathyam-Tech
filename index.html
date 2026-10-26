@@ -1,15 +1,85 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/gk tech logo.jpg" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Critical CSS - Inlined to prevent render blocking -->
+  <style>
+    /* Font fallback to prevent layout shift */
+    * {
+      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-weight: 500;
+    }
+
+    /* Prevent layout shift for hero section */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #root {
+      min-height: 100vh;
+    }
+
+    /* Reserve space for hero image to reduce CLS */
+    #hero img[fetchpriority="high"] {
+      aspect-ratio: 1000 / 563;
+      width: 100%;
+      height: auto;
+    }
+  </style>
+
+  <!-- Preconnect to Google Fonts for faster loading - MUST be before any font requests -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- DNS Prefetch for external resources -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+  <!-- Load Manrope font asynchronously with font-display swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"
+    media="print" onload="this.media='all'">
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  </noscript>
+
+  <!-- Optimized font loading with display=swap to prevent FOIT -->
+  <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@400;700&display=swap" rel="stylesheet"
+    media="print" onload="this.media='all'">
+  <noscript>
     <link href="https://fonts.googleapis.com/css2?family=Stardos+Stencil:wght@400;700&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sathyam Tech Solutions</title>
-    <script type="module" crossorigin src="/assets/index-DN5hWR4U.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Bd2BOAxB.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+  </noscript>
+
+  <link rel="shortcut icon" href="/favicon-ico.png" type="image/png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-ico.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon-ico.png" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="google-site-verification" content="M_SKR2fR07szVyCRKmtEWk_xO_U5mD-eObJnFWZVtj4" />
+  <meta name="description"
+    content="Sathyam Tech Solutions is a professional web and mobile app development agency in Hyderabad. We build fast, secure and scalable websites and apps for businesses.">
+  <meta name="keywords"
+    content="Sathyam Tech Solutions, Custom Websites, Mobile Apps, Digital Presence, Local website developer">
+  <meta name="author" content="Sathyam Tech Solutions">
+
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sathyam Tech Solutions | Web & Mobile App Development Agency in Hyderabad">
+  <meta property="og:description"
+    content="Sathyam Tech Solutions is a professional web and mobile app development agency in Hyderabad. We build fast, secure and scalable websites and apps for businesses.">
+  <meta property="og:site_name" content="Sathyam Tech Solutions">
+
+  <title>Sathyam Tech Solutions | Web & Mobile App Development Agency in Hyderabad</title>
+  <script type="module" crossorigin src="/assets/js/index-DPBw9rJE.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/js/react-vendor-8vyWLlZK.js">
+  <link rel="stylesheet" crossorigin href="/assets/css/index-DBqMIKBD.css">
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
 </html>
